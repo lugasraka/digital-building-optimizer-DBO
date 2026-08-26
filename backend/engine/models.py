@@ -131,6 +131,9 @@ class OptimizeResponse(BaseModel):
     baseline_total_tco2e: float
     sizing: AssetSizing | None
     dispatch: DispatchSummary
+    hourly_import_kw: list[float]
+    hourly_export_kw: list[float]
+    hourly_bess_soc_kwh: list[float]
     financials: FinancialSummary | None
     emissions_trajectory: list[YearlyEmissions]
     target_met: bool | None

@@ -40,6 +40,9 @@ def optimize(req: OptimizeRequest,
         unmet_hours=int((d.unmet_kw > 1e-6).sum()),
         peak_kw_after=d.peak_kw,
     )
+    hourly_import_kw = [float(x) for x in d.import_kw]
+    hourly_export_kw = [float(x) for x in d.export_kw]
+    hourly_bess_soc_kwh = [float(x) for x in d.soc_kwh]
 
     trajectory = []
     scope1_after = float(d.gas_after_mmbtu.sum() * 53.06 / 1000.0)
@@ -61,6 +64,9 @@ def optimize(req: OptimizeRequest,
         baseline_total_tco2e=base.scope1_tco2e + base.scope2_tco2e,
         sizing=sizing,
         dispatch=dispatch,
+        hourly_import_kw=hourly_import_kw,
+        hourly_export_kw=hourly_export_kw,
+        hourly_bess_soc_kwh=hourly_bess_soc_kwh,
         financials=r.best_financials,
         emissions_trajectory=trajectory,
         target_met=r.target_met,
