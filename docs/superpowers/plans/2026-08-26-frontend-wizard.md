@@ -137,15 +137,17 @@ export function createApiClient(baseUrl: string, useMocks: boolean): ApiClient
 ```
 
 - Live client: `fetch` with `Content-Type: application/json`; non-2xx responses are parsed as `Problem` (fallback to a synthesized problem when the body is not RFC 7807) and thrown as `ApiError`.
-- `lib/mock.ts` exports `createMockClient(): ApiClient` — resolves fixtures by `(endpoint, building_type, zip)` with ~200 ms latency, and validates the *request* against the fixture's expected shape so mock mode catches contract drift.
+- `lib/mock.ts` exports `createMockClient(): ApiClient` — resolves fixtures by `(endpoint, building_type, zip, objective)` with ~200 ms latency, and validates the *request* against the fixture's expected shape so mock mode catches contract drift.
 
-Fixture layout (each with a `meta.source` header noting the backend commit it was captured from):
+Fixture layout (each with a `meta.source` header noting the backend commit it was captured from). Fixtures live under `frontend/public/fixtures/` so Next serves them as static assets and the mock client fetches them at runtime — keeping ~700 KB of JSON out of the JS bundle:
 
 ```text
-frontend/fixtures/
+frontend/public/fixtures/
 ├── baseline-office-94105.json
 ├── optimize-office-94105-maxnpv.json
-├── optimize-office-94105-targetco2-nosizing.json
+├── optimize-office-94105-maxnpv-nosizing.json   # all assets off -> sizing null (target_co2 with no assets raises InfeasibleTarget)
+├── optimize-office-94105-targetco2.json         # target_co2 40%, sizing present
+├── resilience-office-94105.json                 # office building (used by the wizard happy path)
 ├── resilience-hospital-94105.json
 └── reference.json
 ```
@@ -471,7 +473,7 @@ Extend `lib/chartOptions.ts` with the aggregation helpers (month = `Math.floor(h
 - [ ] **Step 4: Run tests + build + manual smoke**
 
 Run: `cd frontend && npm test && npm run build`
-Then `npm run dev` (mock mode) — confirm both panels load, heatmap toggle works, and the do-nothing fixture (`optimize-office-94105-targetco2-nosizing.json`) renders the no-assets panel.
+Then `npm run dev` (mock mode) — confirm both panels load, heatmap toggle works, and the do-nothing fixture (`optimize-office-94105-maxnpv-nosizing.json`) renders the no-assets panel.
 
 - [ ] **Step 5: Commit**
 

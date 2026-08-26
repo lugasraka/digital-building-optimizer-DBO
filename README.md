@@ -33,9 +33,22 @@ To rebuild them from public sources (optional):
 
 End-to-end check against a running server: `./scripts/smoke_demo.sh`.
 
-## Tests
+## Quickstart (frontend wizard)
 
-    cd backend && python -m pytest
+    cd frontend
+    npm install
+    cp .env.local.example .env.local   # NEXT_PUBLIC_API_BASE, NEXT_PUBLIC_USE_MOCKS
+    npm run dev                        # http://localhost:3000
+
+With `NEXT_PUBLIC_USE_MOCKS=1` the wizard runs fully offline against committed
+fixtures in `frontend/public/fixtures/` (captured from the live API). With mocks
+off, start the backend first (above) and point `NEXT_PUBLIC_API_BASE` at it.
+
+## Tests (frontend)
+
+    cd frontend
+    npm test          # Vitest unit tests
+    npm run e2e       # Playwright happy-path wizard walk (mock mode, needs npx playwright install chromium once)
 
 ## Honesty notes
 
