@@ -1,5 +1,5 @@
+import type { EChartsOption } from "echarts";
 import type { BaselineResponse, FinancialSummary, OptimizeResponse, ResilienceResponse } from "./types";
-import type { EChartsOption } from "./echarts";
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 

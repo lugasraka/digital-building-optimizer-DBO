@@ -90,7 +90,9 @@ export function createMockClient(): ApiClient {
       const path = `${
         key === "hospital:94105"
           ? "/fixtures/resilience-hospital-94105.json"
-          : ""
+          : key === "office:94105"
+            ? "/fixtures/resilience-office-94105.json"
+            : ""
       }`;
       if (!path) {
         throw new Error(
