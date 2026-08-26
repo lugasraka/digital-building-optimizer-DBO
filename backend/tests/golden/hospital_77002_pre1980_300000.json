@@ -1,0 +1,8 @@
+{
+ "annual_electricity_kwh": 4406400.0,
+ "annual_gas_mmbtu": 13781.7504,
+ "scope1_tco2e": 731.2597,
+ "scope2_tco2e": 1674.432,
+ "peak_kw": 1355.0705,
+ "spend_total_usd": 830553.34
+}
