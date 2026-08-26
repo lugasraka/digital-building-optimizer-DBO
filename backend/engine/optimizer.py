@@ -4,7 +4,11 @@ import numpy as np
 import scipy.sparse as sp
 from scipy.optimize import linprog
 
-from engine.data import Tariff
+from engine.baseline import BaselineResult, compute_baseline
+from engine.data import DataRepo, Tariff, get_repo
+from engine.errors import InfeasibleTarget
+from engine.models import BaselineRequest, ObjectiveMode, OptimizeRequest
+from engine.solar import pv_power_kw
 
 MMBTUH_TO_KW = 293.071
 
@@ -15,6 +19,9 @@ class Sizing:
     bess_kwh: float = 0.0
     bess_kw: float = 0.0
     hp_fraction: float = 0.0
+
+
+from engine import finance as fin  # noqa: E402  (after Sizing to avoid circular import)
 
 
 @dataclass(frozen=True)
@@ -137,3 +144,113 @@ def dispatch_lp(load_kw, gas_mmbtu_h, temps_c, tariff, pv_per_kw, sizing,
         hp_thermal_mmbtu_h=hp_th, gas_after_mmbtu=gas_after,
         peak_kw=peak, annual_cost_usd=cost, co2_tco2e=float(co2),
     )
+
+
+PV_PACKING_KW_PER_SQFT = 0.010
+
+
+def roof_pv_max_kw(floor_area_sqft: float) -> float:
+    return floor_area_sqft * PV_PACKING_KW_PER_SQFT
+
+
+def pv_curve_per_kw(ghi_wm2, temp_c, lat):
+    return pv_power_kw(1.0, ghi_wm2, temp_c, lat)
+
+
+def total_energy_cost(d: DispatchResult, tariff: Tariff) -> float:
+    return float(d.annual_cost_usd
+                 + d.gas_after_mmbtu.sum() * 10.0 * tariff.gas_usd_therm)
+
+
+def _combos(toggles) -> list[tuple[float, float, float]]:
+    pvs = [0.0, 0.5, 1.0] if toggles.pv else [0.0]
+    durs = [0.0, 4.0] if toggles.bess else [0.0]
+    hps = [0.0, 0.9] if toggles.heat_pump else [0.0]
+    out = []
+    for pf in pvs:
+        for dur in durs:
+            for hf in hps:
+                if pf == 0.0 and dur == 0.0 and hf == 0.0:
+                    continue  # zero combo appended once at the end
+                out.append((pf, dur, hf))
+    out.insert(0, (0.0, 0.0, 0.0))
+    return out
+
+
+@dataclass(frozen=True)
+class OptimizeResult:
+    baseline: BaselineResult
+    best_sizing: Sizing | None
+    best_dispatch: DispatchResult
+    best_financials: object | None
+    evaluation_log: list[dict]
+    target_met: bool | None
+
+
+def search_optimal(req: OptimizeRequest, repo: DataRepo | None = None) -> OptimizeResult:
+    repo = repo or get_repo()
+    base = compute_baseline(
+        BaselineRequest(**req.facility.model_dump()), repo)
+    loc, tariff = base.location, base.tariff
+    tmy = repo.tmy(loc.station_id)
+    temps = tmy["temp_c"].to_numpy()
+    ghi = tmy["ghi_wm2"].to_numpy()
+    curve = pv_curve_per_kw(ghi, temps, repo.station_lat(loc.station_id))
+
+    base_cost = (base.spend_electricity_usd + base.spend_demand_usd
+                 + base.spend_gas_usd)
+    base_co2 = base.scope1_tco2e + base.scope2_tco2e
+    peak_bess_kw = 0.3 * base.peak_kw
+    roof_max = roof_pv_max_kw(req.facility.floor_area_sqft)
+
+    log: list[dict] = []
+    results: list[tuple[Sizing, DispatchResult]] = []
+    fins: list = []
+    for pv_frac, dur, hf in _combos(req.scenario.assets):
+        s = Sizing(pv_kw=pv_frac * roof_max,
+                   bess_kwh=dur * peak_bess_kw,
+                   bess_kw=peak_bess_kw if dur > 0 else 0.0,
+                   hp_fraction=hf)
+        d = dispatch_lp(base.hourly_electric_kw,
+                        base.hourly_gas_mmbtu_per_hour,
+                        temps, tariff,
+                        curve if s.pv_kw > 0 else None, s)
+        cost = total_energy_cost(d, tariff)
+        yr1 = base_cost - cost
+        red = (1 - d.co2_tco2e / base_co2) * 100 if base_co2 > 0 else 0.0
+        pv_share = 0.0 if yr1 <= 0 else min(max(
+            (base.spend_electricity_usd + base.spend_demand_usd
+             - d.annual_cost_usd) / yr1, 0.0), 1.0)
+        f = fin.build_financial_summary(s, yr1, pv_share,
+                                        peak_thermal_mmbtu_h=float(
+                                            base.hourly_gas_mmbtu_per_hour.max()))
+        npv_v = f.npv_usd if yr1 > 0 else 0.0
+        log.append({"pv_kw": round(s.pv_kw, 1), "bess_kwh": round(s.bess_kwh, 1),
+                    "hp_fraction": hf, "total_cost_usd": round(cost, 2),
+                    "yr1_savings_usd": round(yr1, 2),
+                    "co2_reduction_pct": round(red, 2),
+                    "npv_usd": round(npv_v, 2)})
+        results.append((s, d))
+        fins.append(f)
+
+    mode = req.scenario.objective
+    target_met = None
+    if mode == ObjectiveMode.TARGET_CO2:
+        tgt = req.scenario.co2_reduction_target_pct
+        feas = [(i, row) for i, row in enumerate(log) if row["co2_reduction_pct"] >= tgt]
+        if not feas:
+            raise InfeasibleTarget(
+                f"target {tgt}% CO2 reduction not achievable with available assets")
+        best_i = max(feas, key=lambda kv: kv[1]["npv_usd"])[0]
+        target_met = True
+    else:
+        best_npv_row = max(range(len(log)), key=lambda i: log[i]["npv_usd"])
+        best_i = best_npv_row if log[best_npv_row]["npv_usd"] > 0 else 0
+    s, d = results[best_i]
+    none_best = all(v == 0.0 for v in (s.pv_kw, s.bess_kwh, s.hp_fraction))
+    return OptimizeResult(baseline=base,
+                          best_sizing=None if none_best else s,
+                          best_dispatch=d,
+                          best_financials=None if none_best else fins[best_i],
+                          evaluation_log=log,
+                          target_met=target_met)
