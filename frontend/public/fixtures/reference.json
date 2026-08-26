@@ -1,0 +1,77 @@
+{
+ "meta": {
+  "source": "captured from backend 1d65602 (GET /api/v1/reference/*)"
+ },
+ "building_types": [
+  {
+   "value": "office",
+   "label": "Office"
+  },
+  {
+   "value": "retail_standalone",
+   "label": "Retail (standalone)"
+  },
+  {
+   "value": "warehouse",
+   "label": "Warehouse"
+  },
+  {
+   "value": "k12_school",
+   "label": "K-12 school"
+  },
+  {
+   "value": "hospital",
+   "label": "Hospital"
+  },
+  {
+   "value": "hotel",
+   "label": "Hotel"
+  }
+ ],
+ "demo_zips": [
+  {
+   "zip": "94105",
+   "label": "San Francisco, CA"
+  },
+  {
+   "zip": "10001",
+   "label": "New York, NY"
+  },
+  {
+   "zip": "60601",
+   "label": "Chicago, IL"
+  },
+  {
+   "zip": "77002",
+   "label": "Houston, TX"
+  },
+  {
+   "zip": "85004",
+   "label": "Phoenix, AZ"
+  },
+  {
+   "zip": "30303",
+   "label": "Atlanta, GA"
+  },
+  {
+   "zip": "80202",
+   "label": "Denver, CO"
+  },
+  {
+   "zip": "98104",
+   "label": "Seattle, WA"
+  }
+ ],
+ "assumptions": {
+  "pv_usd_per_kw": 1700.0,
+  "bess_usd_per_kwh": 400.0,
+  "hp_usd_per_ton": 1800.0,
+  "itc_rate": 0.3,
+  "discount_rate": 0.08,
+  "utility_escalation": 0.025,
+  "eaas_fee_share": 0.85,
+  "analysis_years": 15,
+  "gas_kgco2e_per_mmbtu": 53.06,
+  "provenance": "representative meteorological year; CBECS-derived benchmarks"
+ }
+}

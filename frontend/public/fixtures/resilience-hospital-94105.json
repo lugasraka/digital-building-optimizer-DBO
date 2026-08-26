@@ -1,0 +1,54 @@
+{
+ "county_fips": "06075",
+ "county_name": "San Francisco County",
+ "state": "CA",
+ "overall_before": 48.3,
+ "overall_after": 28.8,
+ "hazards": [
+  {
+   "hazard": "extreme_heat",
+   "before": 91.0,
+   "after": 53.2,
+   "mitigations": [
+    "High-efficiency heat pump cooling",
+    "Envelope hardening and shading"
+   ]
+  },
+  {
+   "hazard": "cold",
+   "before": 18.0,
+   "after": 12.6,
+   "mitigations": [
+    "Cold-climate heat pump"
+   ]
+  },
+  {
+   "hazard": "flood",
+   "before": 54.0,
+   "after": 32.4,
+   "mitigations": [
+    "Battery backup power"
+   ]
+  },
+  {
+   "hazard": "hurricane",
+   "before": 30.0,
+   "after": 16.2,
+   "mitigations": [
+    "Battery backup power",
+    "Envelope hardening and shading"
+   ]
+  },
+  {
+   "hazard": "wildfire",
+   "before": 92.0,
+   "after": 55.2,
+   "mitigations": [
+    "Battery backup power"
+   ]
+  }
+ ],
+ "meta": {
+  "source": "captured from backend 1d65602 (POST /api/v1/resilience, hospital 94105)"
+ }
+}
