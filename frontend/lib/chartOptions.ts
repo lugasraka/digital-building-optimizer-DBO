@@ -3,6 +3,12 @@ import type { EChartsOption } from "./echarts";
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
+// The backend returns yearly cashflows; the chart/CSV show cumulative values.
+export function cumulative(arr: number[]): number[] {
+  let acc = 0;
+  return arr.map((v) => (acc += v));
+}
+
 // Aggregate an 8760-length hourly series into a 12 (month) x 24 (hour) grid.
 export function monthHourAggregate(hourly: number[]): number[][] {
   const grid = Array.from({ length: 12 }, () => Array<number>(24).fill(0));
@@ -143,8 +149,8 @@ export function cashflowOption(f: FinancialSummary): EChartsOption {
     xAxis: { type: "category", data: xAxis },
     yAxis: { type: "value", axisLabel: { formatter: (v: number) => `$${v / 1000}k` } },
     series: [
-      { name: "Direct CapEx (cumulative)", type: "line", data: f.capex_cashflow },
-      { name: "EaaS (cumulative)", type: "line", data: f.eaas_net_cashflow },
+      { name: "Direct CapEx (cumulative)", type: "line", data: cumulative(f.capex_cashflow) },
+      { name: "EaaS (cumulative)", type: "line", data: cumulative(f.eaas_net_cashflow) },
     ],
   };
 }
