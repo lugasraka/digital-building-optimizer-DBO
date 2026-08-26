@@ -111,6 +111,19 @@ class DataRepo:
     def station_lat(self, station_id: str) -> float:
         return next(s for s in self._stations_meta if s["id"] == station_id)["lat"]
 
+    @cached_property
+    def _hazards(self) -> pd.DataFrame:
+        return pd.read_parquet(self._dir / "hazard_index.parquet").set_index("county_fips")
+
+    def hazard(self, county_fips: str) -> dict[str, float]:
+        try:
+            row = self._hazards.loc[county_fips]
+        except KeyError:
+            # state-level fallback rows are keyed "<statefips>000"
+            row = self._hazards.loc[county_fips[:2] + "000"]
+        return {k: float(row[k]) for k in
+                ("extreme_heat", "cold", "flood", "hurricane", "wildfire")}
+
 
 _repo: DataRepo | None = None
 
