@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import { ApiError, createApiClient } from "@/lib/api";
+import { ApiError, getApiClient } from "@/lib/api";
 import type { ApiClient } from "@/lib/api";
 import type {
   BaselineResponse,
@@ -41,12 +41,6 @@ const DEFAULT_SCENARIO: ScenarioConfig = {
   assets: { pv: true, bess: true, heat_pump: true },
 };
 
-function defaultClient(): ApiClient {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000";
-  const useMocks = process.env.NEXT_PUBLIC_USE_MOCKS === "1";
-  return createApiClient(baseUrl, useMocks);
-}
-
 function toProblem(err: unknown): Problem {
   if (err instanceof ApiError) {
     return err.problem;
@@ -79,7 +73,7 @@ export interface WizardState {
   canNavigateTo: (target: StepId) => boolean;
 }
 
-export function createWizardStore(client: ApiClient = defaultClient()) {
+export function createWizardStore(client: ApiClient = getApiClient()) {
   return create<WizardState>()((set, get) => ({
     facility: null,
     scenario: { ...DEFAULT_SCENARIO },

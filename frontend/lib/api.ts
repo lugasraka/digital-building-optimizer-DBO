@@ -55,6 +55,13 @@ function postJson(body: unknown): RequestInit {
   };
 }
 
+// Shared client factory reading the standard NEXT_PUBLIC_* env vars.
+export function getApiClient(): ApiClient {
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000";
+  const useMocks = process.env.NEXT_PUBLIC_USE_MOCKS === "1";
+  return createApiClient(baseUrl, useMocks);
+}
+
 export function createApiClient(baseUrl: string, useMocks: boolean): ApiClient {
   if (useMocks) {
     return createMockClient();
