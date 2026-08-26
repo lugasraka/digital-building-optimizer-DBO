@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "note": "Demo fallback subset. Full ZIP3->county crosswalk is generated once by data_pipeline/build_crosswalk.py and overwrites this file."
+  },
+  "demo_zips": {
+    "94105": { "county_fips": "06075", "county_name": "San Francisco County", "state": "CA", "zone_group": "mixed_dry_marine", "station_id": "KSFO" },
+    "10001": { "county_fips": "36061", "county_name": "New York County",      "state": "NY", "zone_group": "mixed_humid",     "station_id": "KNYC" },
+    "60601": { "county_fips": "17031", "county_name": "Cook County",          "state": "IL", "zone_group": "very_cold_cold",  "station_id": "KCHI" },
+    "77002": { "county_fips": "48201", "county_name": "Harris County",        "state": "TX", "zone_group": "hot_humid",       "station_id": "KHOU" },
+    "85004": { "county_fips": "04013", "county_name": "Maricopa County",      "state": "AZ", "zone_group": "hot_dry",         "station_id": "KPHX" },
+    "30303": { "county_fips": "13121", "county_name": "Fulton County",        "state": "GA", "zone_group": "mixed_humid",     "station_id": "KATL" },
+    "80202": { "county_fips": "08031", "county_name": "Denver County",        "state": "CO", "zone_group": "very_cold_cold",  "station_id": "KDEN" },
+    "98104": { "county_fips": "53033", "county_name": "King County",          "state": "WA", "zone_group": "mixed_dry_marine","station_id": "KSEA" }
+  }
+}

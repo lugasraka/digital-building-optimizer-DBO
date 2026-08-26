@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "source": "CBECS 2018 survey medians, climate/vintage adjusted approximations",
+    "units": "kWh per sqft per year, site energy"
+  },
+  "base": {
+    "office":            { "electricity": 14.0, "gas": 9.0 },
+    "retail_standalone": { "electricity": 8.0,  "gas": 3.0 },
+    "warehouse":         { "electricity": 3.5,  "gas": 2.0 },
+    "k12_school":        { "electricity": 4.5,  "gas": 6.0 },
+    "hospital":          { "electricity": 12.0, "gas": 11.0 },
+    "hotel":             { "electricity": 9.5,  "gas": 7.0 }
+  },
+  "zone_multipliers": {
+    "very_cold_cold": 1.22,
+    "mixed_humid": 1.00,
+    "mixed_dry_marine": 1.05,
+    "hot_humid": 1.02,
+    "hot_dry": 1.08
+  },
+  "vintage_multipliers": {
+    "pre1980": 1.20,
+    "1980_2004": 1.00,
+    "post2004": 0.75
+  },
+  "profiles": {
+    "office": {
+      "end_use_fractions": { "cooling": 0.28, "heating": 0.12, "flat": 0.60 },
+      "gas_flat_fraction": 0.15,
+      "balance_temps_c":   { "heat": 15.0, "cool": 24.0 },
+      "weekend_scale": 0.35
+    },
+    "retail_standalone": {
+      "end_use_fractions": { "cooling": 0.35, "heating": 0.05, "flat": 0.60 },
+      "gas_flat_fraction": 0.30,
+      "balance_temps_c":   { "heat": 16.0, "cool": 24.0 },
+      "weekend_scale": 0.80
+    },
+    "warehouse": {
+      "end_use_fractions": { "cooling": 0.12, "heating": 0.08, "flat": 0.80 },
+      "gas_flat_fraction": 0.20,
+      "balance_temps_c":   { "heat": 12.0, "cool": 26.0 },
+      "weekend_scale": 0.95
+    },
+    "k12_school": {
+      "end_use_fractions": { "cooling": 0.22, "heating": 0.18, "flat": 0.60 },
+      "gas_flat_fraction": 0.15,
+      "balance_temps_c":   { "heat": 17.0, "cool": 24.0 },
+      "weekend_scale": 0.15
+    },
+    "hospital": {
+      "end_use_fractions": { "cooling": 0.28, "heating": 0.17, "flat": 0.55 },
+      "gas_flat_fraction": 0.35,
+      "balance_temps_c":   { "heat": 16.0, "cool": 23.0 },
+      "weekend_scale": 0.92
+    },
+    "hotel": {
+      "end_use_fractions": { "cooling": 0.27, "heating": 0.21, "flat": 0.52 },
+      "gas_flat_fraction": 0.40,
+      "balance_temps_c":   { "heat": 15.0, "cool": 24.0 },
+      "weekend_scale": 0.88
+    }
+  }
+}

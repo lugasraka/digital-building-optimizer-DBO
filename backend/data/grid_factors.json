@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "source": "eGRID2022 subregion averages and EIA state average tariffs (approximations)",
+    "units": "kgCO2e/MWh; USD/kWh; USD/kW-month; USD/therm"
+  },
+  "DEFAULT": {
+    "state": "US", "egrid_subregion": "USAV",
+    "co2e_kg_per_mwh": 363.0,
+    "elec_usd_kwh": 0.131, "demand_usd_kw_month": 12.0, "gas_usd_therm": 1.20
+  },
+  "rows": [
+    { "state": "CA", "egrid_subregion": "CAMX", "co2e_kg_per_mwh": 240.0, "elec_usd_kwh": 0.24,  "demand_usd_kw_month": 15.0, "gas_usd_therm": 1.90 },
+    { "state": "TX", "egrid_subregion": "ERCT", "co2e_kg_per_mwh": 380.0, "elec_usd_kwh": 0.125, "demand_usd_kw_month": 10.0, "gas_usd_therm": 0.85 },
+    { "state": "NY", "egrid_subregion": "NYCW", "co2e_kg_per_mwh": 195.0, "elec_usd_kwh": 0.21,  "demand_usd_kw_month": 16.0, "gas_usd_therm": 1.40 },
+    { "state": "IL", "egrid_subregion": "RFCW", "co2e_kg_per_mwh": 330.0, "elec_usd_kwh": 0.13,  "demand_usd_kw_month": 12.0, "gas_usd_therm": 0.95 },
+    { "state": "CO", "egrid_subregion": "RMPA", "co2e_kg_per_mwh": 480.0, "elec_usd_kwh": 0.12,  "demand_usd_kw_month": 11.0, "gas_usd_therm": 0.90 },
+    { "state": "WA", "egrid_subregion": "NWPG", "co2e_kg_per_mwh": 90.0,  "elec_usd_kwh": 0.105, "demand_usd_kw_month": 9.0,  "gas_usd_therm": 1.00 },
+    { "state": "AZ", "egrid_subregion": "DSWE", "co2e_kg_per_mwh": 420.0, "elec_usd_kwh": 0.12,  "demand_usd_kw_month": 12.0, "gas_usd_therm": 0.90 },
+    { "state": "GA", "egrid_subregion": "SOCO", "co2e_kg_per_mwh": 390.0, "elec_usd_kwh": 0.115, "demand_usd_kw_month": 11.0, "gas_usd_therm": 0.95 },
+    { "state": "MA", "egrid_subregion": "ISNE", "co2e_kg_per_mwh": 240.0, "elec_usd_kwh": 0.24,  "demand_usd_kw_month": 15.0, "gas_usd_therm": 1.60 },
+    { "state": "FL", "egrid_subregion": "FRCC", "co2e_kg_per_mwh": 400.0, "elec_usd_kwh": 0.12,  "demand_usd_kw_month": 10.0, "gas_usd_therm": 0.95 },
+    { "state": "OH", "egrid_subregion": "RFCW", "co2e_kg_per_mwh": 350.0, "elec_usd_kwh": 0.11,  "demand_usd_kw_month": 9.0,  "gas_usd_therm": 0.85 },
+    { "state": "PA", "egrid_subregion": "RFCW", "co2e_kg_per_mwh": 350.0, "elec_usd_kwh": 0.12,  "demand_usd_kw_month": 10.0, "gas_usd_therm": 0.95 }
+  ]
+}
