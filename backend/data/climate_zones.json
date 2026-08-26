@@ -1,15 +1,6337 @@
 {
-  "meta": {
-    "note": "Demo fallback subset. Full ZIP3->county crosswalk is generated once by data_pipeline/build_crosswalk.py and overwrites this file."
+ "meta": {
+  "note": "Demo fallback subset. Full ZIP3->county crosswalk is generated once by data_pipeline/build_crosswalk.py and overwrites this file."
+ },
+ "demo_zips": {
+  "94105": {
+   "county_fips": "06075",
+   "county_name": "San Francisco County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
   },
-  "demo_zips": {
-    "94105": { "county_fips": "06075", "county_name": "San Francisco County", "state": "CA", "zone_group": "mixed_dry_marine", "station_id": "KSFO" },
-    "10001": { "county_fips": "36061", "county_name": "New York County",      "state": "NY", "zone_group": "mixed_humid",     "station_id": "KNYC" },
-    "60601": { "county_fips": "17031", "county_name": "Cook County",          "state": "IL", "zone_group": "very_cold_cold",  "station_id": "KCHI" },
-    "77002": { "county_fips": "48201", "county_name": "Harris County",        "state": "TX", "zone_group": "hot_humid",       "station_id": "KHOU" },
-    "85004": { "county_fips": "04013", "county_name": "Maricopa County",      "state": "AZ", "zone_group": "hot_dry",         "station_id": "KPHX" },
-    "30303": { "county_fips": "13121", "county_name": "Fulton County",        "state": "GA", "zone_group": "mixed_humid",     "station_id": "KATL" },
-    "80202": { "county_fips": "08031", "county_name": "Denver County",        "state": "CO", "zone_group": "very_cold_cold",  "station_id": "KDEN" },
-    "98104": { "county_fips": "53033", "county_name": "King County",          "state": "WA", "zone_group": "mixed_dry_marine","station_id": "KSEA" }
+  "10001": {
+   "county_fips": "36061",
+   "county_name": "New York County",
+   "state": "NY",
+   "zone_group": "mixed_humid",
+   "station_id": "KNYC"
+  },
+  "60601": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "77002": {
+   "county_fips": "48201",
+   "county_name": "Harris County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "85004": {
+   "county_fips": "04013",
+   "county_name": "Maricopa County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "30303": {
+   "county_fips": "13121",
+   "county_name": "Fulton County",
+   "state": "GA",
+   "zone_group": "mixed_humid",
+   "station_id": "KATL"
+  },
+  "80202": {
+   "county_fips": "08031",
+   "county_name": "Denver County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "98104": {
+   "county_fips": "53033",
+   "county_name": "King County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
   }
+ },
+ "crosswalk": {
+  "006": {
+   "county_fips": "72141",
+   "county_name": "Utuado Municipio",
+   "state": "PR",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "007": {
+   "county_fips": "72113",
+   "county_name": "Ponce Municipio",
+   "state": "PR",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "008": {
+   "county_fips": "78010",
+   "county_name": "St. Croix Island",
+   "state": "VI",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "009": {
+   "county_fips": "72127",
+   "county_name": "San Juan Municipio",
+   "state": "PR",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "010": {
+   "county_fips": "25013",
+   "county_name": "Hampden County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "011": {
+   "county_fips": "25013",
+   "county_name": "Hampden County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "012": {
+   "county_fips": "25003",
+   "county_name": "Berkshire County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "013": {
+   "county_fips": "25011",
+   "county_name": "Franklin County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "014": {
+   "county_fips": "25027",
+   "county_name": "Worcester County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "015": {
+   "county_fips": "25027",
+   "county_name": "Worcester County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "016": {
+   "county_fips": "25027",
+   "county_name": "Worcester County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "017": {
+   "county_fips": "25017",
+   "county_name": "Middlesex County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "018": {
+   "county_fips": "25017",
+   "county_name": "Middlesex County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "019": {
+   "county_fips": "25009",
+   "county_name": "Essex County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "020": {
+   "county_fips": "25021",
+   "county_name": "Norfolk County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "021": {
+   "county_fips": "25025",
+   "county_name": "Suffolk County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "022": {
+   "county_fips": "25025",
+   "county_name": "Suffolk County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "023": {
+   "county_fips": "25023",
+   "county_name": "Plymouth County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "024": {
+   "county_fips": "25017",
+   "county_name": "Middlesex County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "025": {
+   "county_fips": "25001",
+   "county_name": "Barnstable County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "026": {
+   "county_fips": "25001",
+   "county_name": "Barnstable County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "027": {
+   "county_fips": "25005",
+   "county_name": "Bristol County",
+   "state": "MA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "028": {
+   "county_fips": "44007",
+   "county_name": "Providence County",
+   "state": "RI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "029": {
+   "county_fips": "44007",
+   "county_name": "Providence County",
+   "state": "RI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "030": {
+   "county_fips": "33011",
+   "county_name": "Hillsborough County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "031": {
+   "county_fips": "33011",
+   "county_name": "Hillsborough County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "032": {
+   "county_fips": "33013",
+   "county_name": "Merrimack County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "033": {
+   "county_fips": "33013",
+   "county_name": "Merrimack County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "034": {
+   "county_fips": "33005",
+   "county_name": "Cheshire County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "035": {
+   "county_fips": "33007",
+   "county_name": "Coos County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "036": {
+   "county_fips": "33019",
+   "county_name": "Sullivan County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "037": {
+   "county_fips": "33009",
+   "county_name": "Grafton County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "038": {
+   "county_fips": "33003",
+   "county_name": "Carroll County",
+   "state": "NH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "039": {
+   "county_fips": "23031",
+   "county_name": "York County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "040": {
+   "county_fips": "23005",
+   "county_name": "Cumberland County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "041": {
+   "county_fips": "23005",
+   "county_name": "Cumberland County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "042": {
+   "county_fips": "23017",
+   "county_name": "Oxford County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "043": {
+   "county_fips": "23011",
+   "county_name": "Kennebec County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "044": {
+   "county_fips": "23019",
+   "county_name": "Penobscot County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "045": {
+   "county_fips": "23015",
+   "county_name": "Lincoln County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "046": {
+   "county_fips": "23009",
+   "county_name": "Hancock County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "047": {
+   "county_fips": "23003",
+   "county_name": "Aroostook County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "048": {
+   "county_fips": "23013",
+   "county_name": "Knox County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "049": {
+   "county_fips": "23025",
+   "county_name": "Somerset County",
+   "state": "ME",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "050": {
+   "county_fips": "50027",
+   "county_name": "Windsor County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "051": {
+   "county_fips": "50027",
+   "county_name": "Windsor County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "052": {
+   "county_fips": "50003",
+   "county_name": "Bennington County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "053": {
+   "county_fips": "50025",
+   "county_name": "Windham County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "054": {
+   "county_fips": "50007",
+   "county_name": "Chittenden County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "056": {
+   "county_fips": "50023",
+   "county_name": "Washington County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "057": {
+   "county_fips": "50021",
+   "county_name": "Rutland County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "058": {
+   "county_fips": "50019",
+   "county_name": "Orleans County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "059": {
+   "county_fips": "50009",
+   "county_name": "Essex County",
+   "state": "VT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "060": {
+   "county_fips": "09003",
+   "county_name": "Hartford County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "061": {
+   "county_fips": "09003",
+   "county_name": "Hartford County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "062": {
+   "county_fips": "09015",
+   "county_name": "Windham County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "063": {
+   "county_fips": "09011",
+   "county_name": "New London County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "064": {
+   "county_fips": "09007",
+   "county_name": "Middlesex County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "065": {
+   "county_fips": "09009",
+   "county_name": "New Haven County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "066": {
+   "county_fips": "09001",
+   "county_name": "Fairfield County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "067": {
+   "county_fips": "09005",
+   "county_name": "Litchfield County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "068": {
+   "county_fips": "09001",
+   "county_name": "Fairfield County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "069": {
+   "county_fips": "09001",
+   "county_name": "Fairfield County",
+   "state": "CT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KBOS"
+  },
+  "070": {
+   "county_fips": "34013",
+   "county_name": "Essex County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "071": {
+   "county_fips": "34013",
+   "county_name": "Essex County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "072": {
+   "county_fips": "34039",
+   "county_name": "Union County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "073": {
+   "county_fips": "34017",
+   "county_name": "Hudson County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "074": {
+   "county_fips": "34003",
+   "county_name": "Bergen County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "075": {
+   "county_fips": "34031",
+   "county_name": "Passaic County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "076": {
+   "county_fips": "34003",
+   "county_name": "Bergen County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "077": {
+   "county_fips": "34025",
+   "county_name": "Monmouth County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "078": {
+   "county_fips": "34027",
+   "county_name": "Morris County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "079": {
+   "county_fips": "34027",
+   "county_name": "Morris County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "080": {
+   "county_fips": "34007",
+   "county_name": "Camden County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "081": {
+   "county_fips": "34007",
+   "county_name": "Camden County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "082": {
+   "county_fips": "34009",
+   "county_name": "Cape May County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "083": {
+   "county_fips": "34011",
+   "county_name": "Cumberland County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "084": {
+   "county_fips": "34001",
+   "county_name": "Atlantic County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "085": {
+   "county_fips": "34021",
+   "county_name": "Mercer County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "086": {
+   "county_fips": "34021",
+   "county_name": "Mercer County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "087": {
+   "county_fips": "34029",
+   "county_name": "Ocean County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "088": {
+   "county_fips": "34023",
+   "county_name": "Middlesex County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "089": {
+   "county_fips": "34023",
+   "county_name": "Middlesex County",
+   "state": "NJ",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "100": {
+   "county_fips": "36061",
+   "county_name": "New York County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "101": {
+   "county_fips": "36061",
+   "county_name": "New York County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "102": {
+   "county_fips": "36061",
+   "county_name": "New York County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "103": {
+   "county_fips": "36085",
+   "county_name": "Richmond County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "104": {
+   "county_fips": "36005",
+   "county_name": "Bronx County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "105": {
+   "county_fips": "36119",
+   "county_name": "Westchester County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "106": {
+   "county_fips": "36119",
+   "county_name": "Westchester County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "107": {
+   "county_fips": "36119",
+   "county_name": "Westchester County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "108": {
+   "county_fips": "36119",
+   "county_name": "Westchester County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "109": {
+   "county_fips": "36071",
+   "county_name": "Orange County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "110": {
+   "county_fips": "36059",
+   "county_name": "Nassau County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "111": {
+   "county_fips": "36081",
+   "county_name": "Queens County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "112": {
+   "county_fips": "36047",
+   "county_name": "Kings County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "113": {
+   "county_fips": "36081",
+   "county_name": "Queens County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "114": {
+   "county_fips": "36081",
+   "county_name": "Queens County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "115": {
+   "county_fips": "36059",
+   "county_name": "Nassau County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "116": {
+   "county_fips": "36081",
+   "county_name": "Queens County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "117": {
+   "county_fips": "36103",
+   "county_name": "Suffolk County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "118": {
+   "county_fips": "36059",
+   "county_name": "Nassau County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "119": {
+   "county_fips": "36103",
+   "county_name": "Suffolk County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "120": {
+   "county_fips": "36001",
+   "county_name": "Albany County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "121": {
+   "county_fips": "36083",
+   "county_name": "Rensselaer County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "122": {
+   "county_fips": "36001",
+   "county_name": "Albany County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "123": {
+   "county_fips": "36093",
+   "county_name": "Schenectady County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "124": {
+   "county_fips": "36111",
+   "county_name": "Ulster County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "125": {
+   "county_fips": "36027",
+   "county_name": "Dutchess County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "126": {
+   "county_fips": "36027",
+   "county_name": "Dutchess County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "127": {
+   "county_fips": "36105",
+   "county_name": "Sullivan County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "128": {
+   "county_fips": "36113",
+   "county_name": "Warren County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "129": {
+   "county_fips": "36019",
+   "county_name": "Clinton County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "130": {
+   "county_fips": "36067",
+   "county_name": "Onondaga County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "131": {
+   "county_fips": "36067",
+   "county_name": "Onondaga County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "132": {
+   "county_fips": "36067",
+   "county_name": "Onondaga County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "133": {
+   "county_fips": "36065",
+   "county_name": "Oneida County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "134": {
+   "county_fips": "36065",
+   "county_name": "Oneida County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "135": {
+   "county_fips": "36043",
+   "county_name": "Herkimer County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "136": {
+   "county_fips": "36089",
+   "county_name": "St. Lawrence County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "137": {
+   "county_fips": "36025",
+   "county_name": "Delaware County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "138": {
+   "county_fips": "36007",
+   "county_name": "Broome County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "139": {
+   "county_fips": "36007",
+   "county_name": "Broome County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "140": {
+   "county_fips": "36029",
+   "county_name": "Erie County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "141": {
+   "county_fips": "36029",
+   "county_name": "Erie County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "142": {
+   "county_fips": "36029",
+   "county_name": "Erie County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "143": {
+   "county_fips": "36063",
+   "county_name": "Niagara County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "144": {
+   "county_fips": "36051",
+   "county_name": "Livingston County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "145": {
+   "county_fips": "36055",
+   "county_name": "Monroe County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "146": {
+   "county_fips": "36055",
+   "county_name": "Monroe County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "147": {
+   "county_fips": "36013",
+   "county_name": "Chautauqua County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "148": {
+   "county_fips": "36101",
+   "county_name": "Steuben County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "149": {
+   "county_fips": "36015",
+   "county_name": "Chemung County",
+   "state": "NY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KNYC"
+  },
+  "150": {
+   "county_fips": "42003",
+   "county_name": "Allegheny County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "151": {
+   "county_fips": "42003",
+   "county_name": "Allegheny County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "152": {
+   "county_fips": "42003",
+   "county_name": "Allegheny County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "153": {
+   "county_fips": "42125",
+   "county_name": "Washington County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "154": {
+   "county_fips": "42051",
+   "county_name": "Fayette County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "155": {
+   "county_fips": "42111",
+   "county_name": "Somerset County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "156": {
+   "county_fips": "42129",
+   "county_name": "Westmoreland County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "157": {
+   "county_fips": "42063",
+   "county_name": "Indiana County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "158": {
+   "county_fips": "42065",
+   "county_name": "Jefferson County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "159": {
+   "county_fips": "42021",
+   "county_name": "Cambria County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "160": {
+   "county_fips": "42019",
+   "county_name": "Butler County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "161": {
+   "county_fips": "42085",
+   "county_name": "Mercer County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "162": {
+   "county_fips": "42005",
+   "county_name": "Armstrong County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "163": {
+   "county_fips": "42121",
+   "county_name": "Venango County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "164": {
+   "county_fips": "42049",
+   "county_name": "Erie County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "165": {
+   "county_fips": "42049",
+   "county_name": "Erie County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "166": {
+   "county_fips": "42013",
+   "county_name": "Blair County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "167": {
+   "county_fips": "42083",
+   "county_name": "McKean County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "168": {
+   "county_fips": "42027",
+   "county_name": "Centre County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "169": {
+   "county_fips": "42117",
+   "county_name": "Tioga County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "170": {
+   "county_fips": "42043",
+   "county_name": "Dauphin County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "171": {
+   "county_fips": "42043",
+   "county_name": "Dauphin County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "172": {
+   "county_fips": "42055",
+   "county_name": "Franklin County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "173": {
+   "county_fips": "42133",
+   "county_name": "York County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "174": {
+   "county_fips": "42133",
+   "county_name": "York County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "175": {
+   "county_fips": "42071",
+   "county_name": "Lancaster County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "176": {
+   "county_fips": "42071",
+   "county_name": "Lancaster County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "177": {
+   "county_fips": "42081",
+   "county_name": "Lycoming County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "178": {
+   "county_fips": "42097",
+   "county_name": "Northumberland County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "179": {
+   "county_fips": "42107",
+   "county_name": "Schuylkill County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "180": {
+   "county_fips": "42077",
+   "county_name": "Lehigh County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "181": {
+   "county_fips": "42077",
+   "county_name": "Lehigh County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "182": {
+   "county_fips": "42079",
+   "county_name": "Luzerne County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "183": {
+   "county_fips": "42089",
+   "county_name": "Monroe County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "184": {
+   "county_fips": "42127",
+   "county_name": "Wayne County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "185": {
+   "county_fips": "42069",
+   "county_name": "Lackawanna County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "186": {
+   "county_fips": "42079",
+   "county_name": "Luzerne County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "187": {
+   "county_fips": "42079",
+   "county_name": "Luzerne County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "188": {
+   "county_fips": "42115",
+   "county_name": "Susquehanna County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "189": {
+   "county_fips": "42017",
+   "county_name": "Bucks County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "190": {
+   "county_fips": "42045",
+   "county_name": "Delaware County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "191": {
+   "county_fips": "42101",
+   "county_name": "Philadelphia County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "193": {
+   "county_fips": "42029",
+   "county_name": "Chester County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "194": {
+   "county_fips": "42091",
+   "county_name": "Montgomery County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "195": {
+   "county_fips": "42011",
+   "county_name": "Berks County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "196": {
+   "county_fips": "42011",
+   "county_name": "Berks County",
+   "state": "PA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KPHL"
+  },
+  "197": {
+   "county_fips": "10003",
+   "county_name": "New Castle County",
+   "state": "DE",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "198": {
+   "county_fips": "10003",
+   "county_name": "New Castle County",
+   "state": "DE",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "199": {
+   "county_fips": "10005",
+   "county_name": "Sussex County",
+   "state": "DE",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "200": {
+   "county_fips": "11001",
+   "county_name": "District of Columbia",
+   "state": "DC",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "201": {
+   "county_fips": "51107",
+   "county_name": "Loudoun County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "202": {
+   "county_fips": "11001",
+   "county_name": "District of Columbia",
+   "state": "DC",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "203": {
+   "county_fips": "11001",
+   "county_name": "District of Columbia",
+   "state": "DC",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "204": {
+   "county_fips": "11001",
+   "county_name": "District of Columbia",
+   "state": "DC",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "205": {
+   "county_fips": "11001",
+   "county_name": "District of Columbia",
+   "state": "DC",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "206": {
+   "county_fips": "24037",
+   "county_name": "St. Mary's County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "207": {
+   "county_fips": "24033",
+   "county_name": "Prince George's County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "208": {
+   "county_fips": "24031",
+   "county_name": "Montgomery County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "209": {
+   "county_fips": "24031",
+   "county_name": "Montgomery County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "210": {
+   "county_fips": "24025",
+   "county_name": "Harford County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "211": {
+   "county_fips": "24005",
+   "county_name": "Baltimore County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "212": {
+   "county_fips": "24510",
+   "county_name": "Baltimore city",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "214": {
+   "county_fips": "24003",
+   "county_name": "Anne Arundel County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "215": {
+   "county_fips": "24001",
+   "county_name": "Allegany County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "216": {
+   "county_fips": "24041",
+   "county_name": "Talbot County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "217": {
+   "county_fips": "24021",
+   "county_name": "Frederick County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "218": {
+   "county_fips": "24045",
+   "county_name": "Wicomico County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "219": {
+   "county_fips": "24015",
+   "county_name": "Cecil County",
+   "state": "MD",
+   "zone_group": "mixed_humid",
+   "station_id": "KPHL"
+  },
+  "220": {
+   "county_fips": "51059",
+   "county_name": "Fairfax County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "221": {
+   "county_fips": "51059",
+   "county_name": "Fairfax County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "222": {
+   "county_fips": "51013",
+   "county_name": "Arlington County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "223": {
+   "county_fips": "51059",
+   "county_name": "Fairfax County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "224": {
+   "county_fips": "51193",
+   "county_name": "Westmoreland County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "225": {
+   "county_fips": "51177",
+   "county_name": "Spotsylvania County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "226": {
+   "county_fips": "51069",
+   "county_name": "Frederick County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "227": {
+   "county_fips": "51113",
+   "county_name": "Madison County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "228": {
+   "county_fips": "51165",
+   "county_name": "Rockingham County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "229": {
+   "county_fips": "51003",
+   "county_name": "Albemarle County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "230": {
+   "county_fips": "51115",
+   "county_name": "Mathews County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "231": {
+   "county_fips": "51097",
+   "county_name": "King and Queen County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "232": {
+   "county_fips": "51760",
+   "county_name": "Richmond city",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "233": {
+   "county_fips": "51001",
+   "county_name": "Accomack County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "234": {
+   "county_fips": "51001",
+   "county_name": "Accomack County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "235": {
+   "county_fips": "51710",
+   "county_name": "Norfolk city",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "236": {
+   "county_fips": "51650",
+   "county_name": "Hampton city",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "237": {
+   "county_fips": "51740",
+   "county_name": "Portsmouth city",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "238": {
+   "county_fips": "51053",
+   "county_name": "Dinwiddie County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "239": {
+   "county_fips": "51147",
+   "county_name": "Prince Edward County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "240": {
+   "county_fips": "51770",
+   "county_name": "Roanoke city",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "241": {
+   "county_fips": "51067",
+   "county_name": "Franklin County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "242": {
+   "county_fips": "51169",
+   "county_name": "Scott County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "243": {
+   "county_fips": "51035",
+   "county_name": "Carroll County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "244": {
+   "county_fips": "51015",
+   "county_name": "Augusta County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "245": {
+   "county_fips": "51143",
+   "county_name": "Pittsylvania County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "246": {
+   "county_fips": "51185",
+   "county_name": "Tazewell County",
+   "state": "VA",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "247": {
+   "county_fips": "54055",
+   "county_name": "Mercer County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "248": {
+   "county_fips": "54047",
+   "county_name": "McDowell County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "249": {
+   "county_fips": "54063",
+   "county_name": "Monroe County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "250": {
+   "county_fips": "54039",
+   "county_name": "Kanawha County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "251": {
+   "county_fips": "54039",
+   "county_name": "Kanawha County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "252": {
+   "county_fips": "54035",
+   "county_name": "Jackson County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "253": {
+   "county_fips": "54039",
+   "county_name": "Kanawha County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "254": {
+   "county_fips": "54003",
+   "county_name": "Berkeley County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "255": {
+   "county_fips": "54043",
+   "county_name": "Lincoln County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "256": {
+   "county_fips": "54045",
+   "county_name": "Logan County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "257": {
+   "county_fips": "54011",
+   "county_name": "Cabell County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "258": {
+   "county_fips": "54081",
+   "county_name": "Raleigh County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "259": {
+   "county_fips": "54081",
+   "county_name": "Raleigh County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "260": {
+   "county_fips": "54009",
+   "county_name": "Brooke County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "261": {
+   "county_fips": "54107",
+   "county_name": "Wood County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "262": {
+   "county_fips": "54083",
+   "county_name": "Randolph County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "263": {
+   "county_fips": "54033",
+   "county_name": "Harrison County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "264": {
+   "county_fips": "54033",
+   "county_name": "Harrison County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "265": {
+   "county_fips": "54061",
+   "county_name": "Monongalia County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "266": {
+   "county_fips": "54067",
+   "county_name": "Nicholas County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "267": {
+   "county_fips": "54027",
+   "county_name": "Hampshire County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "268": {
+   "county_fips": "54031",
+   "county_name": "Hardy County",
+   "state": "WV",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "270": {
+   "county_fips": "37169",
+   "county_name": "Stokes County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "271": {
+   "county_fips": "37067",
+   "county_name": "Forsyth County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "272": {
+   "county_fips": "37081",
+   "county_name": "Guilford County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "273": {
+   "county_fips": "37151",
+   "county_name": "Randolph County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "274": {
+   "county_fips": "37081",
+   "county_name": "Guilford County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "275": {
+   "county_fips": "37183",
+   "county_name": "Wake County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "276": {
+   "county_fips": "37183",
+   "county_name": "Wake County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "277": {
+   "county_fips": "37063",
+   "county_name": "Durham County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "278": {
+   "county_fips": "37065",
+   "county_name": "Edgecombe County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "279": {
+   "county_fips": "37053",
+   "county_name": "Currituck County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "280": {
+   "county_fips": "37071",
+   "county_name": "Gaston County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "281": {
+   "county_fips": "37179",
+   "county_name": "Union County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "282": {
+   "county_fips": "37119",
+   "county_name": "Mecklenburg County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "283": {
+   "county_fips": "37051",
+   "county_name": "Cumberland County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "284": {
+   "county_fips": "37047",
+   "county_name": "Columbus County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "285": {
+   "county_fips": "37031",
+   "county_name": "Carteret County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "286": {
+   "county_fips": "37193",
+   "county_name": "Wilkes County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "287": {
+   "county_fips": "37089",
+   "county_name": "Henderson County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "288": {
+   "county_fips": "37021",
+   "county_name": "Buncombe County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "289": {
+   "county_fips": "37039",
+   "county_name": "Cherokee County",
+   "state": "NC",
+   "zone_group": "hot_humid",
+   "station_id": "KCLT"
+  },
+  "290": {
+   "county_fips": "45063",
+   "county_name": "Lexington County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "291": {
+   "county_fips": "45075",
+   "county_name": "Orangeburg County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "292": {
+   "county_fips": "45079",
+   "county_name": "Richland County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "293": {
+   "county_fips": "45083",
+   "county_name": "Spartanburg County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "294": {
+   "county_fips": "45019",
+   "county_name": "Charleston County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "295": {
+   "county_fips": "45051",
+   "county_name": "Horry County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "296": {
+   "county_fips": "45045",
+   "county_name": "Greenville County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "297": {
+   "county_fips": "45091",
+   "county_name": "York County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "298": {
+   "county_fips": "45003",
+   "county_name": "Aiken County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "299": {
+   "county_fips": "45013",
+   "county_name": "Beaufort County",
+   "state": "SC",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "300": {
+   "county_fips": "13135",
+   "county_name": "Gwinnett County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "301": {
+   "county_fips": "13015",
+   "county_name": "Bartow County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "302": {
+   "county_fips": "13063",
+   "county_name": "Clayton County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "303": {
+   "county_fips": "13121",
+   "county_name": "Fulton County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "304": {
+   "county_fips": "13107",
+   "county_name": "Emanuel County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "305": {
+   "county_fips": "13139",
+   "county_name": "Hall County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "306": {
+   "county_fips": "13221",
+   "county_name": "Oglethorpe County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "307": {
+   "county_fips": "13295",
+   "county_name": "Walker County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "308": {
+   "county_fips": "13301",
+   "county_name": "Warren County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "309": {
+   "county_fips": "13245",
+   "county_name": "Richmond County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "310": {
+   "county_fips": "13175",
+   "county_name": "Laurens County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "312": {
+   "county_fips": "13021",
+   "county_name": "Bibb County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "313": {
+   "county_fips": "13179",
+   "county_name": "Liberty County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "314": {
+   "county_fips": "13051",
+   "county_name": "Chatham County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "315": {
+   "county_fips": "13127",
+   "county_name": "Glynn County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "316": {
+   "county_fips": "13185",
+   "county_name": "Lowndes County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "317": {
+   "county_fips": "13071",
+   "county_name": "Colquitt County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "318": {
+   "county_fips": "13145",
+   "county_name": "Harris County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "319": {
+   "county_fips": "13215",
+   "county_name": "Muscogee County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "320": {
+   "county_fips": "12121",
+   "county_name": "Suwannee County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "321": {
+   "county_fips": "12127",
+   "county_name": "Volusia County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "322": {
+   "county_fips": "12031",
+   "county_name": "Duval County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "323": {
+   "county_fips": "12073",
+   "county_name": "Leon County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "324": {
+   "county_fips": "12005",
+   "county_name": "Bay County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "325": {
+   "county_fips": "12033",
+   "county_name": "Escambia County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "326": {
+   "county_fips": "12001",
+   "county_name": "Alachua County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "327": {
+   "county_fips": "12117",
+   "county_name": "Seminole County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "328": {
+   "county_fips": "12095",
+   "county_name": "Orange County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "329": {
+   "county_fips": "12009",
+   "county_name": "Brevard County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "330": {
+   "county_fips": "12011",
+   "county_name": "Broward County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "331": {
+   "county_fips": "12086",
+   "county_name": "Miami-Dade County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "333": {
+   "county_fips": "12011",
+   "county_name": "Broward County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "334": {
+   "county_fips": "12099",
+   "county_name": "Palm Beach County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "335": {
+   "county_fips": "12057",
+   "county_name": "Hillsborough County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "336": {
+   "county_fips": "12057",
+   "county_name": "Hillsborough County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "337": {
+   "county_fips": "12103",
+   "county_name": "Pinellas County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "338": {
+   "county_fips": "12105",
+   "county_name": "Polk County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "339": {
+   "county_fips": "12071",
+   "county_name": "Lee County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "341": {
+   "county_fips": "12021",
+   "county_name": "Collier County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "342": {
+   "county_fips": "12115",
+   "county_name": "Sarasota County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "344": {
+   "county_fips": "12083",
+   "county_name": "Marion County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "346": {
+   "county_fips": "12101",
+   "county_name": "Pasco County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "347": {
+   "county_fips": "12069",
+   "county_name": "Lake County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "349": {
+   "county_fips": "12111",
+   "county_name": "St. Lucie County",
+   "state": "FL",
+   "zone_group": "hot_humid",
+   "station_id": "KMIA"
+  },
+  "350": {
+   "county_fips": "01073",
+   "county_name": "Jefferson County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "351": {
+   "county_fips": "01073",
+   "county_name": "Jefferson County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "352": {
+   "county_fips": "01073",
+   "county_name": "Jefferson County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "354": {
+   "county_fips": "01125",
+   "county_name": "Tuscaloosa County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "355": {
+   "county_fips": "01127",
+   "county_name": "Walker County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "356": {
+   "county_fips": "01077",
+   "county_name": "Lauderdale County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "357": {
+   "county_fips": "01071",
+   "county_name": "Jackson County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "358": {
+   "county_fips": "01089",
+   "county_name": "Madison County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "359": {
+   "county_fips": "01049",
+   "county_name": "DeKalb County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "360": {
+   "county_fips": "01101",
+   "county_name": "Montgomery County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "361": {
+   "county_fips": "01101",
+   "county_name": "Montgomery County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "362": {
+   "county_fips": "01015",
+   "county_name": "Calhoun County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "363": {
+   "county_fips": "01069",
+   "county_name": "Houston County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "364": {
+   "county_fips": "01099",
+   "county_name": "Monroe County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "365": {
+   "county_fips": "01003",
+   "county_name": "Baldwin County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "366": {
+   "county_fips": "01097",
+   "county_name": "Mobile County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "367": {
+   "county_fips": "01091",
+   "county_name": "Marengo County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "368": {
+   "county_fips": "01081",
+   "county_name": "Lee County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "369": {
+   "county_fips": "01023",
+   "county_name": "Choctaw County",
+   "state": "AL",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "370": {
+   "county_fips": "47125",
+   "county_name": "Montgomery County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "371": {
+   "county_fips": "47149",
+   "county_name": "Rutherford County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "372": {
+   "county_fips": "47037",
+   "county_name": "Davidson County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "373": {
+   "county_fips": "47051",
+   "county_name": "Franklin County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "374": {
+   "county_fips": "47065",
+   "county_name": "Hamilton County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "376": {
+   "county_fips": "47179",
+   "county_name": "Washington County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "377": {
+   "county_fips": "47013",
+   "county_name": "Campbell County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "378": {
+   "county_fips": "47009",
+   "county_name": "Blount County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "379": {
+   "county_fips": "47093",
+   "county_name": "Knox County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "380": {
+   "county_fips": "47047",
+   "county_name": "Fayette County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "381": {
+   "county_fips": "47157",
+   "county_name": "Shelby County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "382": {
+   "county_fips": "47183",
+   "county_name": "Weakley County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "383": {
+   "county_fips": "47077",
+   "county_name": "Henderson County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "384": {
+   "county_fips": "47055",
+   "county_name": "Giles County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "385": {
+   "county_fips": "47133",
+   "county_name": "Overton County",
+   "state": "TN",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "386": {
+   "county_fips": "28009",
+   "county_name": "Benton County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "387": {
+   "county_fips": "28011",
+   "county_name": "Bolivar County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "388": {
+   "county_fips": "28081",
+   "county_name": "Lee County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "389": {
+   "county_fips": "28135",
+   "county_name": "Tallahatchie County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "390": {
+   "county_fips": "28049",
+   "county_name": "Hinds County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "391": {
+   "county_fips": "28129",
+   "county_name": "Smith County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "392": {
+   "county_fips": "28049",
+   "county_name": "Hinds County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "393": {
+   "county_fips": "28075",
+   "county_name": "Lauderdale County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "394": {
+   "county_fips": "28067",
+   "county_name": "Jones County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "395": {
+   "county_fips": "28047",
+   "county_name": "Harrison County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "396": {
+   "county_fips": "28085",
+   "county_name": "Lincoln County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "397": {
+   "county_fips": "28087",
+   "county_name": "Lowndes County",
+   "state": "MS",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "398": {
+   "county_fips": "13099",
+   "county_name": "Early County",
+   "state": "GA",
+   "zone_group": "hot_humid",
+   "station_id": "KATL"
+  },
+  "400": {
+   "county_fips": "21103",
+   "county_name": "Henry County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "401": {
+   "county_fips": "21027",
+   "county_name": "Breckinridge County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "402": {
+   "county_fips": "21111",
+   "county_name": "Jefferson County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "403": {
+   "county_fips": "21011",
+   "county_name": "Bath County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "404": {
+   "county_fips": "21137",
+   "county_name": "Lincoln County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "405": {
+   "county_fips": "21067",
+   "county_name": "Fayette County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "406": {
+   "county_fips": "21073",
+   "county_name": "Franklin County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "407": {
+   "county_fips": "21125",
+   "county_name": "Laurel County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "408": {
+   "county_fips": "21095",
+   "county_name": "Harlan County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "409": {
+   "county_fips": "21121",
+   "county_name": "Knox County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "410": {
+   "county_fips": "21117",
+   "county_name": "Kenton County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "411": {
+   "county_fips": "21089",
+   "county_name": "Greenup County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "412": {
+   "county_fips": "21115",
+   "county_name": "Johnson County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "413": {
+   "county_fips": "21025",
+   "county_name": "Breathitt County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "414": {
+   "county_fips": "21175",
+   "county_name": "Morgan County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "415": {
+   "county_fips": "21195",
+   "county_name": "Pike County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "416": {
+   "county_fips": "21071",
+   "county_name": "Floyd County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "417": {
+   "county_fips": "21193",
+   "county_name": "Perry County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "418": {
+   "county_fips": "21133",
+   "county_name": "Letcher County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "420": {
+   "county_fips": "21083",
+   "county_name": "Graves County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "421": {
+   "county_fips": "21009",
+   "county_name": "Barren County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "422": {
+   "county_fips": "21047",
+   "county_name": "Christian County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "423": {
+   "county_fips": "21183",
+   "county_name": "Ohio County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "424": {
+   "county_fips": "21107",
+   "county_name": "Hopkins County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "425": {
+   "county_fips": "21199",
+   "county_name": "Pulaski County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "426": {
+   "county_fips": "21147",
+   "county_name": "McCreary County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "427": {
+   "county_fips": "21093",
+   "county_name": "Hardin County",
+   "state": "KY",
+   "zone_group": "hot_humid",
+   "station_id": "KBNA"
+  },
+  "430": {
+   "county_fips": "39089",
+   "county_name": "Licking County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "431": {
+   "county_fips": "39129",
+   "county_name": "Pickaway County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "432": {
+   "county_fips": "39049",
+   "county_name": "Franklin County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "433": {
+   "county_fips": "39091",
+   "county_name": "Logan County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "434": {
+   "county_fips": "39123",
+   "county_name": "Ottawa County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "435": {
+   "county_fips": "39069",
+   "county_name": "Henry County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "436": {
+   "county_fips": "39095",
+   "county_name": "Lucas County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "437": {
+   "county_fips": "39119",
+   "county_name": "Muskingum County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "438": {
+   "county_fips": "39031",
+   "county_name": "Coshocton County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "439": {
+   "county_fips": "39013",
+   "county_name": "Belmont County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "440": {
+   "county_fips": "39007",
+   "county_name": "Ashtabula County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "441": {
+   "county_fips": "39035",
+   "county_name": "Cuyahoga County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "442": {
+   "county_fips": "39103",
+   "county_name": "Medina County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "443": {
+   "county_fips": "39153",
+   "county_name": "Summit County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "444": {
+   "county_fips": "39155",
+   "county_name": "Trumbull County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "445": {
+   "county_fips": "39099",
+   "county_name": "Mahoning County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "446": {
+   "county_fips": "39151",
+   "county_name": "Stark County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "447": {
+   "county_fips": "39151",
+   "county_name": "Stark County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "448": {
+   "county_fips": "39147",
+   "county_name": "Seneca County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "449": {
+   "county_fips": "39139",
+   "county_name": "Richland County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "450": {
+   "county_fips": "39017",
+   "county_name": "Butler County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "451": {
+   "county_fips": "39025",
+   "county_name": "Clermont County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "452": {
+   "county_fips": "39061",
+   "county_name": "Hamilton County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "453": {
+   "county_fips": "39037",
+   "county_name": "Darke County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "454": {
+   "county_fips": "39113",
+   "county_name": "Montgomery County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "455": {
+   "county_fips": "39023",
+   "county_name": "Clark County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "456": {
+   "county_fips": "39145",
+   "county_name": "Scioto County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "457": {
+   "county_fips": "39167",
+   "county_name": "Washington County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "458": {
+   "county_fips": "39003",
+   "county_name": "Allen County",
+   "state": "OH",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCLE"
+  },
+  "460": {
+   "county_fips": "18095",
+   "county_name": "Madison County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "461": {
+   "county_fips": "18063",
+   "county_name": "Hendricks County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "462": {
+   "county_fips": "18097",
+   "county_name": "Marion County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "463": {
+   "county_fips": "18089",
+   "county_name": "Lake County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "464": {
+   "county_fips": "18089",
+   "county_name": "Lake County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "465": {
+   "county_fips": "18085",
+   "county_name": "Kosciusko County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "466": {
+   "county_fips": "18141",
+   "county_name": "St. Joseph County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "467": {
+   "county_fips": "18003",
+   "county_name": "Allen County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "468": {
+   "county_fips": "18003",
+   "county_name": "Allen County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "469": {
+   "county_fips": "18103",
+   "county_name": "Miami County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "470": {
+   "county_fips": "18137",
+   "county_name": "Ripley County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "471": {
+   "county_fips": "18019",
+   "county_name": "Clark County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "472": {
+   "county_fips": "18005",
+   "county_name": "Bartholomew County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "473": {
+   "county_fips": "18065",
+   "county_name": "Henry County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "474": {
+   "county_fips": "18105",
+   "county_name": "Monroe County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "475": {
+   "county_fips": "18083",
+   "county_name": "Knox County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "476": {
+   "county_fips": "18051",
+   "county_name": "Gibson County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "477": {
+   "county_fips": "18163",
+   "county_name": "Vanderburgh County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "478": {
+   "county_fips": "18167",
+   "county_name": "Vigo County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "479": {
+   "county_fips": "18157",
+   "county_name": "Tippecanoe County",
+   "state": "IN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KIND"
+  },
+  "480": {
+   "county_fips": "26099",
+   "county_name": "Macomb County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "481": {
+   "county_fips": "26163",
+   "county_name": "Wayne County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "482": {
+   "county_fips": "26163",
+   "county_name": "Wayne County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "483": {
+   "county_fips": "26125",
+   "county_name": "Oakland County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "484": {
+   "county_fips": "26049",
+   "county_name": "Genesee County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "485": {
+   "county_fips": "26049",
+   "county_name": "Genesee County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "486": {
+   "county_fips": "26145",
+   "county_name": "Saginaw County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "487": {
+   "county_fips": "26157",
+   "county_name": "Tuscola County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "488": {
+   "county_fips": "26067",
+   "county_name": "Ionia County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "489": {
+   "county_fips": "26065",
+   "county_name": "Ingham County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "490": {
+   "county_fips": "26077",
+   "county_name": "Kalamazoo County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "491": {
+   "county_fips": "26021",
+   "county_name": "Berrien County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "492": {
+   "county_fips": "26075",
+   "county_name": "Jackson County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "493": {
+   "county_fips": "26081",
+   "county_name": "Kent County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "494": {
+   "county_fips": "26139",
+   "county_name": "Ottawa County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "495": {
+   "county_fips": "26081",
+   "county_name": "Kent County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "496": {
+   "county_fips": "26101",
+   "county_name": "Manistee County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "497": {
+   "county_fips": "26033",
+   "county_name": "Chippewa County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "498": {
+   "county_fips": "26103",
+   "county_name": "Marquette County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "499": {
+   "county_fips": "26061",
+   "county_name": "Houghton County",
+   "state": "MI",
+   "zone_group": "mixed_humid",
+   "station_id": "KDTW"
+  },
+  "500": {
+   "county_fips": "19153",
+   "county_name": "Polk County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "501": {
+   "county_fips": "19099",
+   "county_name": "Jasper County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "502": {
+   "county_fips": "19169",
+   "county_name": "Story County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "503": {
+   "county_fips": "19153",
+   "county_name": "Polk County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "504": {
+   "county_fips": "19033",
+   "county_name": "Cerro Gordo County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "505": {
+   "county_fips": "19187",
+   "county_name": "Webster County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "506": {
+   "county_fips": "19023",
+   "county_name": "Butler County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "507": {
+   "county_fips": "19013",
+   "county_name": "Black Hawk County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "508": {
+   "county_fips": "19003",
+   "county_name": "Adams County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "510": {
+   "county_fips": "19193",
+   "county_name": "Woodbury County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "511": {
+   "county_fips": "19193",
+   "county_name": "Woodbury County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "512": {
+   "county_fips": "19119",
+   "county_name": "Lyon County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "513": {
+   "county_fips": "19041",
+   "county_name": "Clay County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "514": {
+   "county_fips": "19027",
+   "county_name": "Carroll County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "515": {
+   "county_fips": "19155",
+   "county_name": "Pottawattamie County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "516": {
+   "county_fips": "19071",
+   "county_name": "Fremont County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "520": {
+   "county_fips": "19061",
+   "county_name": "Dubuque County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "521": {
+   "county_fips": "19065",
+   "county_name": "Fayette County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "522": {
+   "county_fips": "19113",
+   "county_name": "Linn County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "523": {
+   "county_fips": "19113",
+   "county_name": "Linn County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "524": {
+   "county_fips": "19113",
+   "county_name": "Linn County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "525": {
+   "county_fips": "19179",
+   "county_name": "Wapello County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "526": {
+   "county_fips": "19111",
+   "county_name": "Lee County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "527": {
+   "county_fips": "19163",
+   "county_name": "Scott County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "528": {
+   "county_fips": "19163",
+   "county_name": "Scott County",
+   "state": "IA",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "530": {
+   "county_fips": "55027",
+   "county_name": "Dodge County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "531": {
+   "county_fips": "55059",
+   "county_name": "Kenosha County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "532": {
+   "county_fips": "55079",
+   "county_name": "Milwaukee County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "534": {
+   "county_fips": "55101",
+   "county_name": "Racine County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "535": {
+   "county_fips": "55025",
+   "county_name": "Dane County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "537": {
+   "county_fips": "55025",
+   "county_name": "Dane County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "538": {
+   "county_fips": "55043",
+   "county_name": "Grant County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "539": {
+   "county_fips": "55021",
+   "county_name": "Columbia County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "540": {
+   "county_fips": "55109",
+   "county_name": "St. Croix County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "541": {
+   "county_fips": "55083",
+   "county_name": "Oconto County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "542": {
+   "county_fips": "55029",
+   "county_name": "Door County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "543": {
+   "county_fips": "55009",
+   "county_name": "Brown County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "544": {
+   "county_fips": "55073",
+   "county_name": "Marathon County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "545": {
+   "county_fips": "55125",
+   "county_name": "Vilas County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "546": {
+   "county_fips": "55123",
+   "county_name": "Vernon County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "547": {
+   "county_fips": "55033",
+   "county_name": "Dunn County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "548": {
+   "county_fips": "55007",
+   "county_name": "Bayfield County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "549": {
+   "county_fips": "55139",
+   "county_name": "Winnebago County",
+   "state": "WI",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMKE"
+  },
+  "550": {
+   "county_fips": "27025",
+   "county_name": "Chisago County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "551": {
+   "county_fips": "27123",
+   "county_name": "Ramsey County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "553": {
+   "county_fips": "27053",
+   "county_name": "Hennepin County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "554": {
+   "county_fips": "27053",
+   "county_name": "Hennepin County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "556": {
+   "county_fips": "27075",
+   "county_name": "Lake County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "557": {
+   "county_fips": "27137",
+   "county_name": "St. Louis County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "558": {
+   "county_fips": "27137",
+   "county_name": "St. Louis County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "559": {
+   "county_fips": "27109",
+   "county_name": "Olmsted County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "560": {
+   "county_fips": "27013",
+   "county_name": "Blue Earth County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "561": {
+   "county_fips": "27105",
+   "county_name": "Nobles County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "562": {
+   "county_fips": "27127",
+   "county_name": "Redwood County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "563": {
+   "county_fips": "27145",
+   "county_name": "Stearns County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "564": {
+   "county_fips": "27021",
+   "county_name": "Cass County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "565": {
+   "county_fips": "27111",
+   "county_name": "Otter Tail County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "566": {
+   "county_fips": "27007",
+   "county_name": "Beltrami County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "567": {
+   "county_fips": "27089",
+   "county_name": "Marshall County",
+   "state": "MN",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "570": {
+   "county_fips": "46099",
+   "county_name": "Minnehaha County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "571": {
+   "county_fips": "46099",
+   "county_name": "Minnehaha County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "572": {
+   "county_fips": "46109",
+   "county_name": "Roberts County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "573": {
+   "county_fips": "46005",
+   "county_name": "Beadle County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "574": {
+   "county_fips": "46013",
+   "county_name": "Brown County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "575": {
+   "county_fips": "46123",
+   "county_name": "Tripp County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "576": {
+   "county_fips": "46031",
+   "county_name": "Corson County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "577": {
+   "county_fips": "46103",
+   "county_name": "Pennington County",
+   "state": "SD",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "580": {
+   "county_fips": "38017",
+   "county_name": "Cass County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "581": {
+   "county_fips": "38017",
+   "county_name": "Cass County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "582": {
+   "county_fips": "38035",
+   "county_name": "Grand Forks County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "583": {
+   "county_fips": "38005",
+   "county_name": "Benson County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "584": {
+   "county_fips": "38093",
+   "county_name": "Stutsman County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "585": {
+   "county_fips": "38015",
+   "county_name": "Burleigh County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "586": {
+   "county_fips": "38025",
+   "county_name": "Dunn County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "587": {
+   "county_fips": "38101",
+   "county_name": "Ward County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "588": {
+   "county_fips": "38105",
+   "county_name": "Williams County",
+   "state": "ND",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "590": {
+   "county_fips": "30003",
+   "county_name": "Big Horn County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "591": {
+   "county_fips": "30111",
+   "county_name": "Yellowstone County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "592": {
+   "county_fips": "30105",
+   "county_name": "Valley County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "593": {
+   "county_fips": "30011",
+   "county_name": "Carter County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "594": {
+   "county_fips": "30013",
+   "county_name": "Cascade County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "595": {
+   "county_fips": "30005",
+   "county_name": "Blaine County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "596": {
+   "county_fips": "30049",
+   "county_name": "Lewis and Clark County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "597": {
+   "county_fips": "30057",
+   "county_name": "Madison County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "598": {
+   "county_fips": "30063",
+   "county_name": "Missoula County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "599": {
+   "county_fips": "30029",
+   "county_name": "Flathead County",
+   "state": "MT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "600": {
+   "county_fips": "17097",
+   "county_name": "Lake County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "601": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "602": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "603": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "604": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "605": {
+   "county_fips": "17043",
+   "county_name": "DuPage County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "606": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "607": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "608": {
+   "county_fips": "17031",
+   "county_name": "Cook County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "609": {
+   "county_fips": "17075",
+   "county_name": "Iroquois County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "610": {
+   "county_fips": "17141",
+   "county_name": "Ogle County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "611": {
+   "county_fips": "17201",
+   "county_name": "Winnebago County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "612": {
+   "county_fips": "17161",
+   "county_name": "Rock Island County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "613": {
+   "county_fips": "17011",
+   "county_name": "Bureau County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "614": {
+   "county_fips": "17095",
+   "county_name": "Knox County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "615": {
+   "county_fips": "17143",
+   "county_name": "Peoria County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "616": {
+   "county_fips": "17143",
+   "county_name": "Peoria County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "617": {
+   "county_fips": "17113",
+   "county_name": "McLean County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "618": {
+   "county_fips": "17019",
+   "county_name": "Champaign County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "619": {
+   "county_fips": "17029",
+   "county_name": "Coles County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "620": {
+   "county_fips": "17119",
+   "county_name": "Madison County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "622": {
+   "county_fips": "17163",
+   "county_name": "St. Clair County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "623": {
+   "county_fips": "17001",
+   "county_name": "Adams County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "624": {
+   "county_fips": "17079",
+   "county_name": "Jasper County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "625": {
+   "county_fips": "17115",
+   "county_name": "Macon County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "626": {
+   "county_fips": "17137",
+   "county_name": "Morgan County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "627": {
+   "county_fips": "17167",
+   "county_name": "Sangamon County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "628": {
+   "county_fips": "17191",
+   "county_name": "Wayne County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "629": {
+   "county_fips": "17199",
+   "county_name": "Williamson County",
+   "state": "IL",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "630": {
+   "county_fips": "29099",
+   "county_name": "Jefferson County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "631": {
+   "county_fips": "29510",
+   "county_name": "St. Louis city",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "633": {
+   "county_fips": "29113",
+   "county_name": "Lincoln County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "634": {
+   "county_fips": "29111",
+   "county_name": "Lewis County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "635": {
+   "county_fips": "29001",
+   "county_name": "Adair County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "636": {
+   "county_fips": "29093",
+   "county_name": "Iron County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "637": {
+   "county_fips": "29031",
+   "county_name": "Cape Girardeau County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "638": {
+   "county_fips": "29143",
+   "county_name": "New Madrid County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "639": {
+   "county_fips": "29023",
+   "county_name": "Butler County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "640": {
+   "county_fips": "29095",
+   "county_name": "Jackson County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "641": {
+   "county_fips": "29095",
+   "county_name": "Jackson County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "644": {
+   "county_fips": "29147",
+   "county_name": "Nodaway County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "645": {
+   "county_fips": "29021",
+   "county_name": "Buchanan County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "646": {
+   "county_fips": "29061",
+   "county_name": "Daviess County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "647": {
+   "county_fips": "29217",
+   "county_name": "Vernon County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "648": {
+   "county_fips": "29097",
+   "county_name": "Jasper County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "650": {
+   "county_fips": "29151",
+   "county_name": "Osage County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "651": {
+   "county_fips": "29051",
+   "county_name": "Cole County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "652": {
+   "county_fips": "29019",
+   "county_name": "Boone County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "653": {
+   "county_fips": "29159",
+   "county_name": "Pettis County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "654": {
+   "county_fips": "29161",
+   "county_name": "Phelps County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "655": {
+   "county_fips": "29215",
+   "county_name": "Texas County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "656": {
+   "county_fips": "29209",
+   "county_name": "Stone County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "657": {
+   "county_fips": "29153",
+   "county_name": "Ozark County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "658": {
+   "county_fips": "29077",
+   "county_name": "Greene County",
+   "state": "MO",
+   "zone_group": "mixed_humid",
+   "station_id": "KMEM"
+  },
+  "660": {
+   "county_fips": "20103",
+   "county_name": "Leavenworth County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "661": {
+   "county_fips": "20209",
+   "county_name": "Wyandotte County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "662": {
+   "county_fips": "20091",
+   "county_name": "Johnson County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "664": {
+   "county_fips": "20131",
+   "county_name": "Nemaha County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "665": {
+   "county_fips": "20085",
+   "county_name": "Jackson County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "666": {
+   "county_fips": "20177",
+   "county_name": "Shawnee County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "667": {
+   "county_fips": "20037",
+   "county_name": "Crawford County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "668": {
+   "county_fips": "20017",
+   "county_name": "Chase County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "669": {
+   "county_fips": "20157",
+   "county_name": "Republic County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "670": {
+   "county_fips": "20173",
+   "county_name": "Sedgwick County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "671": {
+   "county_fips": "20173",
+   "county_name": "Sedgwick County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "672": {
+   "county_fips": "20173",
+   "county_name": "Sedgwick County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "673": {
+   "county_fips": "20099",
+   "county_name": "Labette County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "674": {
+   "county_fips": "20143",
+   "county_name": "Ottawa County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "675": {
+   "county_fips": "20155",
+   "county_name": "Reno County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "676": {
+   "county_fips": "20065",
+   "county_name": "Graham County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "677": {
+   "county_fips": "20153",
+   "county_name": "Rawlins County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "678": {
+   "county_fips": "20057",
+   "county_name": "Ford County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "679": {
+   "county_fips": "20189",
+   "county_name": "Stevens County",
+   "state": "KS",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "680": {
+   "county_fips": "31155",
+   "county_name": "Saunders County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "681": {
+   "county_fips": "31055",
+   "county_name": "Douglas County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "683": {
+   "county_fips": "31067",
+   "county_name": "Gage County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "684": {
+   "county_fips": "31109",
+   "county_name": "Lancaster County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "685": {
+   "county_fips": "31109",
+   "county_name": "Lancaster County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "686": {
+   "county_fips": "31141",
+   "county_name": "Platte County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "687": {
+   "county_fips": "31089",
+   "county_name": "Holt County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "688": {
+   "county_fips": "31041",
+   "county_name": "Custer County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "689": {
+   "county_fips": "31001",
+   "county_name": "Adams County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "690": {
+   "county_fips": "31063",
+   "county_name": "Frontier County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "691": {
+   "county_fips": "31111",
+   "county_name": "Lincoln County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "692": {
+   "county_fips": "31031",
+   "county_name": "Cherry County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "693": {
+   "county_fips": "31161",
+   "county_name": "Sheridan County",
+   "state": "NE",
+   "zone_group": "very_cold_cold",
+   "station_id": "KMSP"
+  },
+  "700": {
+   "county_fips": "22051",
+   "county_name": "Jefferson Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "701": {
+   "county_fips": "22071",
+   "county_name": "Orleans Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "703": {
+   "county_fips": "22057",
+   "county_name": "Lafourche Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "704": {
+   "county_fips": "22105",
+   "county_name": "Tangipahoa Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "705": {
+   "county_fips": "22055",
+   "county_name": "Lafayette Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "706": {
+   "county_fips": "22019",
+   "county_name": "Calcasieu Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "707": {
+   "county_fips": "22077",
+   "county_name": "Pointe Coupee Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "708": {
+   "county_fips": "22033",
+   "county_name": "East Baton Rouge Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "710": {
+   "county_fips": "22017",
+   "county_name": "Caddo Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "711": {
+   "county_fips": "22017",
+   "county_name": "Caddo Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "712": {
+   "county_fips": "22073",
+   "county_name": "Ouachita Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "713": {
+   "county_fips": "22009",
+   "county_name": "Avoyelles Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "714": {
+   "county_fips": "22079",
+   "county_name": "Rapides Parish",
+   "state": "LA",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "716": {
+   "county_fips": "05079",
+   "county_name": "Lincoln County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "717": {
+   "county_fips": "05139",
+   "county_name": "Union County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "718": {
+   "county_fips": "05057",
+   "county_name": "Hempstead County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "719": {
+   "county_fips": "05059",
+   "county_name": "Hot Spring County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "720": {
+   "county_fips": "05145",
+   "county_name": "White County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "721": {
+   "county_fips": "05119",
+   "county_name": "Pulaski County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "722": {
+   "county_fips": "05119",
+   "county_name": "Pulaski County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "723": {
+   "county_fips": "05093",
+   "county_name": "Mississippi County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "724": {
+   "county_fips": "05031",
+   "county_name": "Craighead County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "725": {
+   "county_fips": "05065",
+   "county_name": "Izard County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "726": {
+   "county_fips": "05089",
+   "county_name": "Marion County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "727": {
+   "county_fips": "05007",
+   "county_name": "Benton County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "728": {
+   "county_fips": "05149",
+   "county_name": "Yell County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "729": {
+   "county_fips": "05131",
+   "county_name": "Sebastian County",
+   "state": "AR",
+   "zone_group": "hot_humid",
+   "station_id": "KMEM"
+  },
+  "730": {
+   "county_fips": "40015",
+   "county_name": "Caddo County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "731": {
+   "county_fips": "40109",
+   "county_name": "Oklahoma County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "734": {
+   "county_fips": "40019",
+   "county_name": "Carter County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "735": {
+   "county_fips": "40031",
+   "county_name": "Comanche County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "736": {
+   "county_fips": "40149",
+   "county_name": "Washita County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "737": {
+   "county_fips": "40047",
+   "county_name": "Garfield County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "738": {
+   "county_fips": "40153",
+   "county_name": "Woodward County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "739": {
+   "county_fips": "40139",
+   "county_name": "Texas County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "740": {
+   "county_fips": "40037",
+   "county_name": "Creek County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "741": {
+   "county_fips": "40143",
+   "county_name": "Tulsa County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "743": {
+   "county_fips": "40097",
+   "county_name": "Mayes County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "744": {
+   "county_fips": "40101",
+   "county_name": "Muskogee County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "745": {
+   "county_fips": "40121",
+   "county_name": "Pittsburg County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "746": {
+   "county_fips": "40071",
+   "county_name": "Kay County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "747": {
+   "county_fips": "40013",
+   "county_name": "Bryan County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "748": {
+   "county_fips": "40125",
+   "county_name": "Pottawatomie County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "749": {
+   "county_fips": "40079",
+   "county_name": "Le Flore County",
+   "state": "OK",
+   "zone_group": "hot_dry",
+   "station_id": "KOKC"
+  },
+  "750": {
+   "county_fips": "48113",
+   "county_name": "Dallas County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "751": {
+   "county_fips": "48113",
+   "county_name": "Dallas County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "752": {
+   "county_fips": "48113",
+   "county_name": "Dallas County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "753": {
+   "county_fips": "48113",
+   "county_name": "Dallas County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "754": {
+   "county_fips": "48147",
+   "county_name": "Fannin County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "755": {
+   "county_fips": "48067",
+   "county_name": "Cass County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "756": {
+   "county_fips": "48203",
+   "county_name": "Harrison County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "757": {
+   "county_fips": "48423",
+   "county_name": "Smith County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "758": {
+   "county_fips": "48001",
+   "county_name": "Anderson County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "759": {
+   "county_fips": "48351",
+   "county_name": "Newton County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "760": {
+   "county_fips": "48439",
+   "county_name": "Tarrant County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "761": {
+   "county_fips": "48439",
+   "county_name": "Tarrant County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "762": {
+   "county_fips": "48121",
+   "county_name": "Denton County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "763": {
+   "county_fips": "48485",
+   "county_name": "Wichita County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "764": {
+   "county_fips": "48143",
+   "county_name": "Erath County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "765": {
+   "county_fips": "48027",
+   "county_name": "Bell County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "766": {
+   "county_fips": "48217",
+   "county_name": "Hill County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "767": {
+   "county_fips": "48309",
+   "county_name": "McLennan County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "768": {
+   "county_fips": "48083",
+   "county_name": "Coleman County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "769": {
+   "county_fips": "48451",
+   "county_name": "Tom Green County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "770": {
+   "county_fips": "48201",
+   "county_name": "Harris County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "772": {
+   "county_fips": "48201",
+   "county_name": "Harris County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "773": {
+   "county_fips": "48339",
+   "county_name": "Montgomery County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "774": {
+   "county_fips": "48157",
+   "county_name": "Fort Bend County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "775": {
+   "county_fips": "48201",
+   "county_name": "Harris County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "776": {
+   "county_fips": "48245",
+   "county_name": "Jefferson County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "777": {
+   "county_fips": "48245",
+   "county_name": "Jefferson County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "778": {
+   "county_fips": "48041",
+   "county_name": "Brazos County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "779": {
+   "county_fips": "48469",
+   "county_name": "Victoria County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "780": {
+   "county_fips": "48013",
+   "county_name": "Atascosa County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "781": {
+   "county_fips": "48493",
+   "county_name": "Wilson County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "782": {
+   "county_fips": "48029",
+   "county_name": "Bexar County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "783": {
+   "county_fips": "48355",
+   "county_name": "Nueces County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "784": {
+   "county_fips": "48355",
+   "county_name": "Nueces County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "785": {
+   "county_fips": "48215",
+   "county_name": "Hidalgo County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "786": {
+   "county_fips": "48453",
+   "county_name": "Travis County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "787": {
+   "county_fips": "48453",
+   "county_name": "Travis County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "788": {
+   "county_fips": "48463",
+   "county_name": "Uvalde County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "789": {
+   "county_fips": "48149",
+   "county_name": "Fayette County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "790": {
+   "county_fips": "48179",
+   "county_name": "Gray County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "791": {
+   "county_fips": "48375",
+   "county_name": "Potter County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "792": {
+   "county_fips": "48191",
+   "county_name": "Hall County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "793": {
+   "county_fips": "48303",
+   "county_name": "Lubbock County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "794": {
+   "county_fips": "48303",
+   "county_name": "Lubbock County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "795": {
+   "county_fips": "48441",
+   "county_name": "Taylor County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "796": {
+   "county_fips": "48441",
+   "county_name": "Taylor County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "797": {
+   "county_fips": "48135",
+   "county_name": "Ector County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "798": {
+   "county_fips": "48141",
+   "county_name": "El Paso County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "799": {
+   "county_fips": "48141",
+   "county_name": "El Paso County",
+   "state": "TX",
+   "zone_group": "hot_humid",
+   "station_id": "KHOU"
+  },
+  "800": {
+   "county_fips": "08001",
+   "county_name": "Adams County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "801": {
+   "county_fips": "08035",
+   "county_name": "Douglas County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "802": {
+   "county_fips": "08031",
+   "county_name": "Denver County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "803": {
+   "county_fips": "08013",
+   "county_name": "Boulder County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "804": {
+   "county_fips": "08059",
+   "county_name": "Jefferson County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "805": {
+   "county_fips": "08069",
+   "county_name": "Larimer County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "806": {
+   "county_fips": "08123",
+   "county_name": "Weld County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "807": {
+   "county_fips": "08075",
+   "county_name": "Logan County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "808": {
+   "county_fips": "08041",
+   "county_name": "El Paso County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "809": {
+   "county_fips": "08041",
+   "county_name": "El Paso County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "810": {
+   "county_fips": "08101",
+   "county_name": "Pueblo County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "811": {
+   "county_fips": "08021",
+   "county_name": "Conejos County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "812": {
+   "county_fips": "08043",
+   "county_name": "Fremont County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "813": {
+   "county_fips": "08083",
+   "county_name": "Montezuma County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "814": {
+   "county_fips": "08085",
+   "county_name": "Montrose County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "815": {
+   "county_fips": "08077",
+   "county_name": "Mesa County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "816": {
+   "county_fips": "08037",
+   "county_name": "Eagle County",
+   "state": "CO",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "820": {
+   "county_fips": "56021",
+   "county_name": "Laramie County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "821": {
+   "county_fips": "56029",
+   "county_name": "Park County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "822": {
+   "county_fips": "56015",
+   "county_name": "Goshen County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "823": {
+   "county_fips": "56007",
+   "county_name": "Carbon County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "824": {
+   "county_fips": "56003",
+   "county_name": "Big Horn County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "825": {
+   "county_fips": "56013",
+   "county_name": "Fremont County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "826": {
+   "county_fips": "56025",
+   "county_name": "Natrona County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "827": {
+   "county_fips": "56011",
+   "county_name": "Crook County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "828": {
+   "county_fips": "56033",
+   "county_name": "Sheridan County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "829": {
+   "county_fips": "56037",
+   "county_name": "Sweetwater County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "830": {
+   "county_fips": "56039",
+   "county_name": "Teton County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "831": {
+   "county_fips": "56023",
+   "county_name": "Lincoln County",
+   "state": "WY",
+   "zone_group": "very_cold_cold",
+   "station_id": "KDEN"
+  },
+  "832": {
+   "county_fips": "16011",
+   "county_name": "Bingham County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "833": {
+   "county_fips": "16083",
+   "county_name": "Twin Falls County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "834": {
+   "county_fips": "16019",
+   "county_name": "Bonneville County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "835": {
+   "county_fips": "16049",
+   "county_name": "Idaho County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "836": {
+   "county_fips": "16027",
+   "county_name": "Canyon County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "837": {
+   "county_fips": "16001",
+   "county_name": "Ada County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "838": {
+   "county_fips": "16017",
+   "county_name": "Bonner County",
+   "state": "ID",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "840": {
+   "county_fips": "49035",
+   "county_name": "Salt Lake County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "841": {
+   "county_fips": "49035",
+   "county_name": "Salt Lake County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "843": {
+   "county_fips": "49003",
+   "county_name": "Box Elder County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "844": {
+   "county_fips": "49057",
+   "county_name": "Weber County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "845": {
+   "county_fips": "49037",
+   "county_name": "San Juan County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "846": {
+   "county_fips": "49039",
+   "county_name": "Sanpete County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "847": {
+   "county_fips": "49053",
+   "county_name": "Washington County",
+   "state": "UT",
+   "zone_group": "very_cold_cold",
+   "station_id": "KSLC"
+  },
+  "850": {
+   "county_fips": "04013",
+   "county_name": "Maricopa County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "851": {
+   "county_fips": "04021",
+   "county_name": "Pinal County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "852": {
+   "county_fips": "04013",
+   "county_name": "Maricopa County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "853": {
+   "county_fips": "04013",
+   "county_name": "Maricopa County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "855": {
+   "county_fips": "04007",
+   "county_name": "Gila County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "856": {
+   "county_fips": "04003",
+   "county_name": "Cochise County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "857": {
+   "county_fips": "04019",
+   "county_name": "Pima County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "859": {
+   "county_fips": "04017",
+   "county_name": "Navajo County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "860": {
+   "county_fips": "04005",
+   "county_name": "Coconino County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "863": {
+   "county_fips": "04025",
+   "county_name": "Yavapai County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "864": {
+   "county_fips": "04015",
+   "county_name": "Mohave County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "865": {
+   "county_fips": "04001",
+   "county_name": "Apache County",
+   "state": "AZ",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "870": {
+   "county_fips": "35043",
+   "county_name": "Sandoval County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "871": {
+   "county_fips": "35001",
+   "county_name": "Bernalillo County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "873": {
+   "county_fips": "35031",
+   "county_name": "McKinley County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "874": {
+   "county_fips": "35045",
+   "county_name": "San Juan County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "875": {
+   "county_fips": "35039",
+   "county_name": "Rio Arriba County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "877": {
+   "county_fips": "35033",
+   "county_name": "Mora County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "878": {
+   "county_fips": "35003",
+   "county_name": "Catron County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "879": {
+   "county_fips": "35051",
+   "county_name": "Sierra County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "880": {
+   "county_fips": "35013",
+   "county_name": "Do\u00f1a Ana County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "881": {
+   "county_fips": "35041",
+   "county_name": "Roosevelt County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "882": {
+   "county_fips": "35025",
+   "county_name": "Lea County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "883": {
+   "county_fips": "35035",
+   "county_name": "Otero County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "884": {
+   "county_fips": "35059",
+   "county_name": "Union County",
+   "state": "NM",
+   "zone_group": "hot_dry",
+   "station_id": "KPHX"
+  },
+  "890": {
+   "county_fips": "32003",
+   "county_name": "Clark County",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "891": {
+   "county_fips": "32003",
+   "county_name": "Clark County",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "893": {
+   "county_fips": "32033",
+   "county_name": "White Pine County",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "894": {
+   "county_fips": "32031",
+   "county_name": "Washoe County",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "895": {
+   "county_fips": "32031",
+   "county_name": "Washoe County",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "897": {
+   "county_fips": "32510",
+   "county_name": "Carson City",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "898": {
+   "county_fips": "32007",
+   "county_name": "Elko County",
+   "state": "NV",
+   "zone_group": "hot_dry",
+   "station_id": "KLAS"
+  },
+  "900": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "902": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "903": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "904": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "905": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "906": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "907": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "908": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "910": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "911": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "912": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "913": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "914": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "915": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "916": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "917": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "918": {
+   "county_fips": "06037",
+   "county_name": "Los Angeles County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "919": {
+   "county_fips": "06073",
+   "county_name": "San Diego County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "920": {
+   "county_fips": "06073",
+   "county_name": "San Diego County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "921": {
+   "county_fips": "06073",
+   "county_name": "San Diego County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "922": {
+   "county_fips": "06065",
+   "county_name": "Riverside County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "923": {
+   "county_fips": "06071",
+   "county_name": "San Bernardino County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "924": {
+   "county_fips": "06071",
+   "county_name": "San Bernardino County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "925": {
+   "county_fips": "06065",
+   "county_name": "Riverside County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "926": {
+   "county_fips": "06059",
+   "county_name": "Orange County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "927": {
+   "county_fips": "06059",
+   "county_name": "Orange County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "928": {
+   "county_fips": "06059",
+   "county_name": "Orange County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "930": {
+   "county_fips": "06111",
+   "county_name": "Ventura County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "931": {
+   "county_fips": "06083",
+   "county_name": "Santa Barbara County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "932": {
+   "county_fips": "06107",
+   "county_name": "Tulare County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "933": {
+   "county_fips": "06029",
+   "county_name": "Kern County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "934": {
+   "county_fips": "06079",
+   "county_name": "San Luis Obispo County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "935": {
+   "county_fips": "06029",
+   "county_name": "Kern County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "936": {
+   "county_fips": "06019",
+   "county_name": "Fresno County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "937": {
+   "county_fips": "06019",
+   "county_name": "Fresno County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "939": {
+   "county_fips": "06053",
+   "county_name": "Monterey County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "940": {
+   "county_fips": "06081",
+   "county_name": "San Mateo County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "941": {
+   "county_fips": "06075",
+   "county_name": "San Francisco County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "943": {
+   "county_fips": "06085",
+   "county_name": "Santa Clara County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "944": {
+   "county_fips": "06081",
+   "county_name": "San Mateo County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "945": {
+   "county_fips": "06013",
+   "county_name": "Contra Costa County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "946": {
+   "county_fips": "06001",
+   "county_name": "Alameda County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "947": {
+   "county_fips": "06001",
+   "county_name": "Alameda County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "948": {
+   "county_fips": "06013",
+   "county_name": "Contra Costa County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "949": {
+   "county_fips": "06041",
+   "county_name": "Marin County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "950": {
+   "county_fips": "06085",
+   "county_name": "Santa Clara County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "951": {
+   "county_fips": "06085",
+   "county_name": "Santa Clara County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "952": {
+   "county_fips": "06077",
+   "county_name": "San Joaquin County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "953": {
+   "county_fips": "06099",
+   "county_name": "Stanislaus County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "954": {
+   "county_fips": "06097",
+   "county_name": "Sonoma County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "955": {
+   "county_fips": "06023",
+   "county_name": "Humboldt County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "956": {
+   "county_fips": "06067",
+   "county_name": "Sacramento County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "957": {
+   "county_fips": "06061",
+   "county_name": "Placer County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "958": {
+   "county_fips": "06067",
+   "county_name": "Sacramento County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "959": {
+   "county_fips": "06007",
+   "county_name": "Butte County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "960": {
+   "county_fips": "06089",
+   "county_name": "Shasta County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "961": {
+   "county_fips": "06035",
+   "county_name": "Lassen County",
+   "state": "CA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSFO"
+  },
+  "967": {
+   "county_fips": "15001",
+   "county_name": "Hawaii County",
+   "state": "HI",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "968": {
+   "county_fips": "15003",
+   "county_name": "Honolulu County",
+   "state": "HI",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "969": {
+   "county_fips": "66010",
+   "county_name": "Guam",
+   "state": "GU",
+   "zone_group": "mixed_humid",
+   "station_id": "KCHI"
+  },
+  "970": {
+   "county_fips": "41005",
+   "county_name": "Clackamas County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "971": {
+   "county_fips": "41057",
+   "county_name": "Tillamook County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "972": {
+   "county_fips": "41051",
+   "county_name": "Multnomah County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "973": {
+   "county_fips": "41047",
+   "county_name": "Marion County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "974": {
+   "county_fips": "41039",
+   "county_name": "Lane County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "975": {
+   "county_fips": "41029",
+   "county_name": "Jackson County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "976": {
+   "county_fips": "41035",
+   "county_name": "Klamath County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "977": {
+   "county_fips": "41017",
+   "county_name": "Deschutes County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "978": {
+   "county_fips": "41059",
+   "county_name": "Umatilla County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "979": {
+   "county_fips": "41045",
+   "county_name": "Malheur County",
+   "state": "OR",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KPDX"
+  },
+  "980": {
+   "county_fips": "53033",
+   "county_name": "King County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "981": {
+   "county_fips": "53033",
+   "county_name": "King County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "982": {
+   "county_fips": "53061",
+   "county_name": "Snohomish County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "983": {
+   "county_fips": "53053",
+   "county_name": "Pierce County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "984": {
+   "county_fips": "53053",
+   "county_name": "Pierce County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "985": {
+   "county_fips": "53027",
+   "county_name": "Grays Harbor County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "986": {
+   "county_fips": "53011",
+   "county_name": "Clark County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "988": {
+   "county_fips": "53047",
+   "county_name": "Okanogan County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "989": {
+   "county_fips": "53077",
+   "county_name": "Yakima County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "990": {
+   "county_fips": "53063",
+   "county_name": "Spokane County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "991": {
+   "county_fips": "53075",
+   "county_name": "Whitman County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "992": {
+   "county_fips": "53063",
+   "county_name": "Spokane County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "993": {
+   "county_fips": "53005",
+   "county_name": "Benton County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "994": {
+   "county_fips": "53003",
+   "county_name": "Asotin County",
+   "state": "WA",
+   "zone_group": "mixed_dry_marine",
+   "station_id": "KSEA"
+  },
+  "995": {
+   "county_fips": "02020",
+   "county_name": "Anchorage Municipality",
+   "state": "AK",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "996": {
+   "county_fips": "02050",
+   "county_name": "Bethel Census Area",
+   "state": "AK",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "997": {
+   "county_fips": "02290",
+   "county_name": "Yukon-Koyukuk Census Area",
+   "state": "AK",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "998": {
+   "county_fips": "02105",
+   "county_name": "Hoonah-Angoon Census Area",
+   "state": "AK",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  },
+  "999": {
+   "county_fips": "02198",
+   "county_name": "Prince of Wales-Hyder Census Area",
+   "state": "AK",
+   "zone_group": "very_cold_cold",
+   "station_id": "KCHI"
+  }
+ }
 }
