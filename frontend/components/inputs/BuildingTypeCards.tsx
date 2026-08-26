@@ -23,7 +23,7 @@ export function BuildingTypeCards({ value, types, onChange }: BuildingTypeCardsP
               onClick={() => onChange(t.value)}
               className={`rounded-lg border px-3 py-3 text-left text-sm shadow-sm transition-colors ${
                 selected
-                  ? "border-blue-600 bg-blue-50 text-blue-900 ring-1 ring-blue-600"
+                  ? "border-brand-700 bg-brand-50 text-brand-900 ring-1 ring-brand-700"
                   : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
               }`}
             >

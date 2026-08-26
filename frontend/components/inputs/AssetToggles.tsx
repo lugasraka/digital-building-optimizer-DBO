@@ -37,7 +37,7 @@ export function AssetToggles({ value, onChange }: AssetTogglesProps) {
                 onChange={(e) =>
                   onChange({ ...value, [o.key]: e.target.checked })
                 }
-                className="h-4 w-4 rounded accent-blue-600"
+                className="h-4 w-4 rounded accent-brand-700"
               />
             </label>
           );

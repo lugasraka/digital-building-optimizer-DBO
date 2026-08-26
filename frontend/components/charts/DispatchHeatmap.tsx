@@ -22,7 +22,7 @@ export function DispatchHeatmap({ optimize }: { optimize: OptimizeResponse }) {
       aria-pressed={view === v}
       className={`rounded-full px-3 py-1 text-xs font-medium ${
         view === v
-          ? "bg-blue-600 text-white"
+          ? "bg-brand-700 text-white"
           : "bg-slate-100 text-slate-600 hover:bg-slate-200"
       }`}
     >

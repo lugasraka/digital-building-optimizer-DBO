@@ -64,7 +64,10 @@ describe("mock client", () => {
     const client = createApiClient("http://x", true);
     const o = await client.postOptimize({
       facility: FACILITY,
-      scenario: { objective: "max_npv" },
+      scenario: {
+        objective: "max_npv",
+        assets: { pv: true, bess: true, heat_pump: true },
+      },
     });
     expect(o.hourly_import_kw).toHaveLength(8760);
     expect(o.hourly_export_kw).toHaveLength(8760);

@@ -35,13 +35,13 @@ export function ObjectiveSelector({ value, onChange }: ObjectiveSelectorProps) {
               onClick={() => onChange(o.value)}
               className={`rounded-lg border p-4 text-left transition-colors ${
                 selected
-                  ? "border-blue-600 bg-blue-50 ring-1 ring-blue-600"
+                  ? "border-brand-700 bg-brand-50 ring-1 ring-brand-700"
                   : "border-slate-300 bg-white hover:bg-slate-50"
               }`}
             >
               <p
                 className={`text-sm font-semibold ${
-                  selected ? "text-blue-900" : "text-slate-800"
+                  selected ? "text-brand-900" : "text-slate-800"
                 }`}
               >
                 {o.title}

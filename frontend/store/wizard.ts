@@ -3,6 +3,7 @@ import { create } from "zustand";
 import { ApiError, getApiClient } from "@/lib/api";
 import type { ApiClient } from "@/lib/api";
 import type {
+  AssetToggles,
   BaselineResponse,
   FacilityInput,
   OptimizeResponse,
@@ -63,7 +64,7 @@ export interface WizardState {
   loading: StepId | null;
   error: Problem | null;
   setFacility: (f: FacilityInput) => void;
-  setScenario: (s: Partial<ScenarioConfig>) => void;
+  setScenario: (s: Partial<Omit<ScenarioConfig, "assets">> & { assets?: Partial<AssetToggles> }) => void;
   runBaseline: () => Promise<void>;
   runOptimize: () => Promise<void>;
   runResilience: () => Promise<void>;
@@ -74,6 +75,11 @@ export interface WizardState {
 }
 
 export function createWizardStore(client: ApiClient = getApiClient()) {
+  // Per-request in-flight flags (closure state of this store instance).
+  let baselineInFlight = false;
+  let optimizeInFlight = false;
+  let resilienceInFlight = false;
+
   return create<WizardState>()((set, get) => ({
     facility: null,
     scenario: { ...DEFAULT_SCENARIO },
@@ -100,40 +106,52 @@ export function createWizardStore(client: ApiClient = getApiClient()) {
 
     runBaseline: async () => {
       const { facility } = get();
-      if (!facility) return;
+      // Guard against duplicate in-flight requests (StrictMode double-invokes
+      // effects); results actions also share one "loading" slot so they need
+      // separate tracking.
+      if (!facility || baselineInFlight) return;
+      baselineInFlight = true;
       set({ loading: "baseline", error: null });
       try {
         const baseline = await client.postBaseline(facility);
         set({ baseline, loading: null });
       } catch (err) {
         set({ error: toProblem(err), loading: null });
+      } finally {
+        baselineInFlight = false;
       }
     },
 
     runOptimize: async () => {
       const { facility, scenario } = get();
-      if (!facility) return;
-      set({ loading: "results", error: null });
+      if (!facility || optimizeInFlight) return;
+      optimizeInFlight = true;
+      set({ error: null });
       try {
         const optimize = await client.postOptimize({ facility, scenario });
-        set({ optimize, loading: null });
+        set({ optimize });
       } catch (err) {
-        set({ error: toProblem(err), loading: null });
+        set({ error: toProblem(err) });
+      } finally {
+        optimizeInFlight = false;
       }
     },
 
     runResilience: async () => {
       const { facility } = get();
-      if (!facility) return;
-      set({ loading: "results", error: null });
+      if (!facility || resilienceInFlight) return;
+      resilienceInFlight = true;
+      set({ error: null });
       try {
         const resilience = await client.postResilience({
           zip_code: facility.zip_code,
           building_type: facility.building_type,
         });
-        set({ resilience, loading: null });
+        set({ resilience });
       } catch (err) {
-        set({ error: toProblem(err), loading: null });
+        set({ error: toProblem(err) });
+      } finally {
+        resilienceInFlight = false;
       }
     },
 

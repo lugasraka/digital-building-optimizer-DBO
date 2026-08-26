@@ -40,7 +40,7 @@ export function ResilienceCard({
                 {h.mitigations.map((m) => (
                   <li
                     key={m}
-                    className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs text-blue-700"
+                    className="rounded-full bg-brand-50 px-2.5 py-0.5 text-xs text-brand-800"
                   >
                     {m}
                   </li>

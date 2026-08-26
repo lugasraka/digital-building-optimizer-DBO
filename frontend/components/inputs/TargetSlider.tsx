@@ -16,7 +16,7 @@ export function TargetSlider({ value, onChange }: TargetSliderProps) {
         >
           CO₂ reduction target
         </label>
-        <span className="text-lg font-semibold text-blue-700">{current}%</span>
+        <span className="text-lg font-semibold text-brand-800">{current}%</span>
       </div>
       <input
         id="co2-target"
@@ -26,7 +26,7 @@ export function TargetSlider({ value, onChange }: TargetSliderProps) {
         step={5}
         value={current}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-2 w-full accent-blue-600"
+        className="mt-2 w-full accent-brand-700"
       />
       <div className="flex justify-between text-xs text-slate-400">
         <span>5%</span>

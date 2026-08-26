@@ -1,5 +1,6 @@
 import type { EChartsOption } from "echarts";
 import type { BaselineResponse, FinancialSummary, OptimizeResponse, ResilienceResponse } from "./types";
+import { PALETTE, dispatchRamp, storageRamp } from "./palette";
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
@@ -23,6 +24,7 @@ export function emissionsDonutOption(b: BaselineResponse): EChartsOption {
   return {
     tooltip: { trigger: "item", valueFormatter: (v) => `${v} tCO₂e` },
     legend: { bottom: 0 },
+    color: [PALETTE.slate, PALETTE.brand],
     series: [
       {
         type: "pie",
@@ -47,6 +49,7 @@ export function costBreakdownOption(b: BaselineResponse): EChartsOption {
       {
         type: "bar",
         barMaxWidth: 56,
+        itemStyle: { color: PALETTE.brand, borderRadius: [4, 4, 0, 0] },
         data: [
           { name: "Electricity", value: round2(b.spend.electricity_usd) },
           { name: "Demand charges", value: round2(b.spend.demand_charges_usd) },
@@ -71,12 +74,15 @@ export function monthlyLoadOption(b: BaselineResponse): EChartsOption {
       {
         name: "Electricity (kWh)",
         type: "bar",
+        itemStyle: { color: PALETTE.brand },
         data: b.monthly.map((m) => m.electricity_kwh),
       },
       {
         name: "Gas (MMBtu)",
         type: "line",
         yAxisIndex: 1,
+        itemStyle: { color: PALETTE.amber },
+        lineStyle: { color: PALETTE.amber },
         data: b.monthly.map((m) => m.gas_mmbtu),
       },
     ],
@@ -105,7 +111,7 @@ export function dispatchHeatmapOption(importKw: number[]): EChartsOption {
       orient: "horizontal",
       left: "center",
       bottom: 0,
-      inRange: { color: ["#e2e8f0", "#93c5fd", "#1d4ed8"] },
+      inRange: { color: [...dispatchRamp] },
     },
     series: [{ type: "heatmap", data }],
   };
@@ -133,7 +139,7 @@ export function bessSocHeatmapOption(socKwh: number[]): EChartsOption {
       orient: "horizontal",
       left: "center",
       bottom: 0,
-      inRange: { color: ["#ecfccb", "#84cc16", "#365314"] },
+      inRange: { color: [...storageRamp] },
     },
     series: [{ type: "heatmap", data }],
   };
@@ -149,8 +155,20 @@ export function cashflowOption(f: FinancialSummary): EChartsOption {
     xAxis: { type: "category", data: xAxis },
     yAxis: { type: "value", axisLabel: { formatter: (v: number) => `$${v / 1000}k` } },
     series: [
-      { name: "Direct CapEx (cumulative)", type: "line", data: cumulative(f.capex_cashflow) },
-      { name: "EaaS (cumulative)", type: "line", data: cumulative(f.eaas_net_cashflow) },
+      {
+        name: "Direct CapEx (cumulative)",
+        type: "line",
+        itemStyle: { color: PALETTE.slateDark },
+        lineStyle: { color: PALETTE.slateDark },
+        data: cumulative(f.capex_cashflow),
+      },
+      {
+        name: "EaaS (cumulative)",
+        type: "line",
+        itemStyle: { color: PALETTE.emerald },
+        lineStyle: { color: PALETTE.emerald },
+        data: cumulative(f.eaas_net_cashflow),
+      },
     ],
   };
 }
@@ -166,12 +184,16 @@ export function emissionsTrajectoryOption(o: OptimizeResponse): EChartsOption {
       {
         name: "Scope 1 + Scope 2",
         type: "line",
+        itemStyle: { color: PALETTE.brand },
+        lineStyle: { color: PALETTE.brand },
+        areaStyle: { color: `${PALETTE.brand}14` },
         data: o.emissions_trajectory.map((y) => round2(y.scope1_tco2e + y.scope2_tco2e)),
       },
       {
         name: "Baseline total",
         type: "line",
-        lineStyle: { type: "dashed" },
+        itemStyle: { color: PALETTE.slate },
+        lineStyle: { type: "dashed", color: PALETTE.slate },
         data: o.emissions_trajectory.map(() => round2(o.baseline_total_tco2e)),
       },
     ],
@@ -186,6 +208,7 @@ export function resilienceRadarOption(r: ResilienceResponse): EChartsOption {
   return {
     tooltip: {},
     legend: { bottom: 0 },
+    color: [PALETTE.slate, PALETTE.emerald],
     radar: { indicator: indicators, radius: "65%" },
     series: [
       {
