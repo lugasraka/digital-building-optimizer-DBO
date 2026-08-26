@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-26
 **Status:** Approved
-**Purpose:** Technical proof-of-concept replicating the core concepts of the Siemens Decarbonization Business Optimizer (DBO™): convert minimal facility inputs into energy/emissions baselines, size and dispatch clean-energy assets, score climate resilience, and compare financing structures — presented through a guided wizard UI.
+**Purpose:** Standalone technical proof-of-concept for building decarbonization planning: convert minimal facility inputs into energy/emissions baselines, size and dispatch clean-energy assets, score climate resilience, and compare financing structures — presented through a guided wizard UI.
 
 ---
 

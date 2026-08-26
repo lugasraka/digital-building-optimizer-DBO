@@ -3174,10 +3174,10 @@ Create `README.md` at repo root:
 ```markdown
 # Digital Building Optimizer (DBO Prototype)
 
-A standalone technical proof-of-concept inspired by the concepts of the Siemens
-Decarbonization Business Optimizer: three facility inputs become an energy and
-emissions baseline, clean-energy asset sizing with hourly dispatch, climate
-resilience scoring, and CapEx-vs-EaaS financing comparison.
+A standalone technical proof-of-concept for building decarbonization planning:
+three facility inputs become an energy and emissions baseline, clean-energy
+asset sizing with hourly dispatch, climate resilience scoring, and a
+CapEx-vs-EaaS financing comparison.
 
 Design spec: `docs/superpowers/specs/2026-08-26-dbo-prototype-design.md`.
 Implementation plans: `docs/superpowers/plans/`.

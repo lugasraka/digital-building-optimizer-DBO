@@ -1,15 +1,11 @@
-# Siemens DBO™ Prototyping & Enhancement Implementation Plan
+# Digital Building Optimizer (DBO) — Prototyping & Enhancement Implementation Plan
 
-This implementation plan outlines the architecture, development phases, and official reference sources for building an enhanced, standalone version of the **Siemens Digital Business Optimizer (DBO™)**.
+This implementation plan outlines the architecture, development phases, and reference sources for building an enhanced, standalone version of the **Digital Building Optimizer (DBO)**.
 
 ---
 
 ### Official Primary Sources & Assets
 
-* **Live Application:** [Siemens DBO Web App](https://www.dbo.siemens.com/)
-* **Product Overview & Launch:** [Siemens Climate Week NYC Launch Press Release](https://news.siemens.com/en-us/siemens-launches-decarbonization-tool-at-climate-week-nyc/) & [SFS Commercial Buildings Solution Page](https://www.siemens.com/en-us/products/financial-services/optimization/commercial-buildings/)
-* **Architecture & Engineering Deep Dive:** [AWS Technical Blog: Simplifying the Path to Net-Zero with Siemens DBO](https://aws.amazon.com/blogs/industries/simplifying-the-path-to-net-zero-facilities-with-siemens-decarbonization-business-optimizer-powered-by-aws/)
-* **Product Journey & Innovation Case Study:** [Siemens Insights: A Big Idea with a Commitment to Innovation](https://www.siemens.com/en-us/company/insights/big-idea-commitment-to-innovation/)
 * **Underlying Optimization Engine Reference:** [NREL REopt® Julia / Python API](https://www.google.com/search?q=https://reopt.nrel.gov/tool) (the optimization library leveraged by DBO)
 
 ---
@@ -29,7 +25,7 @@ This implementation plan outlines the architecture, development phases, and offi
 │   ├── Baseline Engine (EIA CBECS / ENTSO-E / eGRID / ComStock)         │
 │   ├── Optimization Engine (SciPy / Pyomo / NREL REopt Lite API)        │
 │   ├── Climate Hazard Engine (FEMA NRI / NOAA / Copernicus)             │
-│   └── SFS Financing Engine (Discounted Cash Flow / EaaS / Leases)      │
+│   └── Financing Engine (Discounted Cash Flow / EaaS / Leases)         │
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │
                                     ▼
@@ -72,7 +68,7 @@ This implementation plan outlines the architecture, development phases, and offi
 
 
 
-#### Phase 3: Resilience Scoring & SFS Financial Structuring
+#### Phase 3: Resilience Scoring & Financial Structuring
 
 * **Goal:** Incorporate multi-hazard physical risk and cash flow projections.
 * **Key Tasks:**
@@ -87,7 +83,7 @@ This implementation plan outlines the architecture, development phases, and offi
 
 #### Phase 4: Strategic Enhancements (Differentiating from DBO)
 
-* **Goal:** Add capabilities that extend beyond the baseline Siemens DBO feature set.
+* **Goal:** Add capabilities that extend beyond the baseline DBO feature set.
 * **Proposed Enhancements:**
 1. **CRREM Stranding Risk Engine:** Project facility emissions against Carbon Risk Real Estate Monitor 1.5°C/2.0°C decarbonization target curves to pinpoint the exact stranding year and carbon penalty exposure.
 2. **Embodied Carbon (Scope 3) Ledger:** Calculate the upfront embodied footprint ($\text{kg CO}_2\text{e}/\text{kWp}$ or $\text{kg CO}_2\text{e}/\text{kWh}$) of installed PV and battery hardware against operational carbon savings to calculate true net carbon payback.
@@ -122,6 +118,4 @@ dbo-prototype/
 
 ---
 
-For a visual walkthrough of the tool's interface and feature workflow, you can watch the [Siemens DBO Overview Video](https://www.youtube.com/watch?v=ShnSiKAmwEo).
-
-This video illustrates how DBO structures facility efficiency inputs, evaluates technology scenarios, and presents hazard risk summaries.
+The tool structures facility efficiency inputs, evaluates technology scenarios, and presents hazard risk summaries.
