@@ -1,11 +1,25 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useShallow } from "zustand/react/shallow";
+
 import { STEP_TITLES, STEPS, useWizard } from "@/store/wizard";
 
 export function StepIndicator() {
+  const router = useRouter();
+  // Subscribe to the gating data (not the stable helper functions) so the
+  // rail re-renders when prerequisite state changes.
+  useWizard(
+    useShallow((s) => [
+      s.facility,
+      s.baseline,
+      s.optimize,
+      s.resilience,
+      s.scenario,
+    ]),
+  );
   const activeStep = useWizard((s) => s.activeStep);
   const canNavigateTo = useWizard((s) => s.canNavigateTo);
-  const setActiveStep = useWizard((s) => s.setActiveStep);
 
   return (
     <nav aria-label="Wizard progress" className="mt-4">
@@ -23,7 +37,7 @@ export function StepIndicator() {
               {i > 0 && <span className="mx-2 h-px w-6 bg-slate-300" aria-hidden="true" />}
               <button
                 type="button"
-                onClick={() => setActiveStep(step)}
+                onClick={() => router.push(`/wizard/${step}`)}
                 disabled={!reachable}
                 aria-current={active ? "step" : undefined}
                 className="group flex items-center gap-2 disabled:cursor-not-allowed"

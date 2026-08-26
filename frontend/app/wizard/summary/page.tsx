@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { downloadCsv, summaryCsv } from "@/lib/csv";
@@ -39,6 +40,7 @@ export default function SummaryPage() {
   const optimize = useWizard((s) => s.optimize);
   const resilience = useWizard((s) => s.resilience);
   const reset = useWizard((s) => s.reset);
+  const router = useRouter();
 
   const [buildingTypes, setBuildingTypes] = useState<ReferenceBuildingType[]>([]);
   useEffect(() => {
@@ -169,7 +171,10 @@ export default function SummaryPage() {
         </button>
         <button
           type="button"
-          onClick={reset}
+          onClick={() => {
+            reset();
+            router.push("/wizard/facility");
+          }}
           className="rounded-lg border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
         >
           Start over
