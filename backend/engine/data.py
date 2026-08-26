@@ -3,6 +3,8 @@ from dataclasses import dataclass
 from functools import cached_property
 from pathlib import Path
 
+import pandas as pd
+
 from engine.errors import UnsupportedBuildingType, UnsupportedZip
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -93,6 +95,21 @@ class DataRepo:
             balance_temps_c=prof["balance_temps_c"],
             weekend_scale=prof["weekend_scale"],
         )
+
+    @cached_property
+    def _tmy_frame(self) -> pd.DataFrame:
+        return pd.read_parquet(self._dir / "tmy_profiles.parquet")
+
+    def tmy(self, station_id: str) -> pd.DataFrame:
+        df = self._tmy_frame[self._tmy_frame["station_id"] == station_id]
+        return df.set_index("hour")[["temp_c", "ghi_wm2"]].sort_index()
+
+    @cached_property
+    def _stations_meta(self) -> list[dict]:
+        return json.loads((self._dir / "stations.json").read_text())
+
+    def station_lat(self, station_id: str) -> float:
+        return next(s for s in self._stations_meta if s["id"] == station_id)["lat"]
 
 
 _repo: DataRepo | None = None

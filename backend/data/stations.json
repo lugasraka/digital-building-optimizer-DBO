@@ -1,0 +1,205 @@
+[
+ {
+  "id": "KSFO",
+  "name": "San Francisco",
+  "state": "CA",
+  "zone_group": "mixed_dry_marine",
+  "lat": 37.6
+ },
+ {
+  "id": "KNYC",
+  "name": "New York",
+  "state": "NY",
+  "zone_group": "mixed_humid",
+  "lat": 40.8
+ },
+ {
+  "id": "KCHI",
+  "name": "Chicago",
+  "state": "IL",
+  "zone_group": "very_cold_cold",
+  "lat": 42.0
+ },
+ {
+  "id": "KHOU",
+  "name": "Houston",
+  "state": "TX",
+  "zone_group": "hot_humid",
+  "lat": 29.6
+ },
+ {
+  "id": "KPHX",
+  "name": "Phoenix",
+  "state": "AZ",
+  "zone_group": "hot_dry",
+  "lat": 33.4
+ },
+ {
+  "id": "KATL",
+  "name": "Atlanta",
+  "state": "GA",
+  "zone_group": "mixed_humid",
+  "lat": 33.6
+ },
+ {
+  "id": "KDEN",
+  "name": "Denver",
+  "state": "CO",
+  "zone_group": "very_cold_cold",
+  "lat": 39.8
+ },
+ {
+  "id": "KSEA",
+  "name": "Seattle",
+  "state": "WA",
+  "zone_group": "mixed_dry_marine",
+  "lat": 47.4
+ },
+ {
+  "id": "KBOS",
+  "name": "Boston",
+  "state": "MA",
+  "zone_group": "very_cold_cold",
+  "lat": 42.4
+ },
+ {
+  "id": "KMIA",
+  "name": "Miami",
+  "state": "FL",
+  "zone_group": "hot_humid",
+  "lat": 25.8
+ },
+ {
+  "id": "KLAX",
+  "name": "Los Angeles",
+  "state": "CA",
+  "zone_group": "mixed_dry_marine",
+  "lat": 33.9
+ },
+ {
+  "id": "KDTW",
+  "name": "Detroit",
+  "state": "MI",
+  "zone_group": "very_cold_cold",
+  "lat": 42.2
+ },
+ {
+  "id": "KPHL",
+  "name": "Philadelphia",
+  "state": "PA",
+  "zone_group": "mixed_humid",
+  "lat": 39.9
+ },
+ {
+  "id": "KMSP",
+  "name": "Minneapolis",
+  "state": "MN",
+  "zone_group": "very_cold_cold",
+  "lat": 44.9
+ },
+ {
+  "id": "KSLC",
+  "name": "Salt Lake City",
+  "state": "UT",
+  "zone_group": "very_cold_cold",
+  "lat": 40.9
+ },
+ {
+  "id": "KDFW",
+  "name": "Dallas",
+  "state": "TX",
+  "zone_group": "hot_humid",
+  "lat": 32.9
+ },
+ {
+  "id": "KCLT",
+  "name": "Charlotte",
+  "state": "NC",
+  "zone_group": "mixed_humid",
+  "lat": 35.2
+ },
+ {
+  "id": "KLAS",
+  "name": "Las Vegas",
+  "state": "NV",
+  "zone_group": "hot_dry",
+  "lat": 36.1
+ },
+ {
+  "id": "KPDX",
+  "name": "Portland",
+  "state": "OR",
+  "zone_group": "mixed_dry_marine",
+  "lat": 45.6
+ },
+ {
+  "id": "KSAN",
+  "name": "San Diego",
+  "state": "CA",
+  "zone_group": "mixed_dry_marine",
+  "lat": 32.7
+ },
+ {
+  "id": "KOAK",
+  "name": "Oakland",
+  "state": "CA",
+  "zone_group": "mixed_dry_marine",
+  "lat": 37.7
+ },
+ {
+  "id": "KSAT",
+  "name": "San Antonio",
+  "state": "TX",
+  "zone_group": "hot_humid",
+  "lat": 29.5
+ },
+ {
+  "id": "KJAX",
+  "name": "Jacksonville",
+  "state": "FL",
+  "zone_group": "hot_humid",
+  "lat": 30.5
+ },
+ {
+  "id": "KMEM",
+  "name": "Memphis",
+  "state": "TN",
+  "zone_group": "hot_humid",
+  "lat": 34.9
+ },
+ {
+  "id": "KOKC",
+  "name": "Oklahoma City",
+  "state": "OK",
+  "zone_group": "hot_dry",
+  "lat": 35.4
+ },
+ {
+  "id": "KBNA",
+  "name": "Nashville",
+  "state": "TN",
+  "zone_group": "mixed_humid",
+  "lat": 36.1
+ },
+ {
+  "id": "KCLE",
+  "name": "Cleveland",
+  "state": "OH",
+  "zone_group": "very_cold_cold",
+  "lat": 41.4
+ },
+ {
+  "id": "KIND",
+  "name": "Indianapolis",
+  "state": "IN",
+  "zone_group": "very_cold_cold",
+  "lat": 39.7
+ },
+ {
+  "id": "KMKE",
+  "name": "Milwaukee",
+  "state": "WI",
+  "zone_group": "very_cold_cold",
+  "lat": 43.0
+ }
+]

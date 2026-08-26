@@ -4,11 +4,6 @@ from engine.data import DataRepo
 from engine.errors import UnsupportedBuildingType, UnsupportedZip
 
 
-@pytest.fixture()
-def repo() -> DataRepo:
-    return DataRepo()
-
-
 def test_location_demo_zip(repo):
     loc = repo.location("94105")
     assert loc.state == "CA"
