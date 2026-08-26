@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 
 from app.api.v1.baseline import router as baseline_router
 from app.api.v1.optimize import router as optimize_router
+from app.api.v1.reference import router as reference_router
 from app.api.v1.resilience import router as resilience_router
 from engine.errors import InfeasibleTarget, UnsupportedBuildingType, UnsupportedZip
 
@@ -40,6 +41,7 @@ def create_app() -> FastAPI:
 
     app.include_router(baseline_router, prefix="/api/v1")
     app.include_router(optimize_router, prefix="/api/v1")
+    app.include_router(reference_router, prefix="/api/v1")
     app.include_router(resilience_router, prefix="/api/v1")
 
     @app.get("/api/v1/health")

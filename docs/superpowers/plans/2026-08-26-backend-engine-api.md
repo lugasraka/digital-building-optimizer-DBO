@@ -3237,4 +3237,4 @@ git commit -m "feat(api): reference endpoints, demo smoke script, README"
 
 ## Plan complete
 
-Frontend wizard (Next.js) is covered by a separate plan written after this backend plan executes: `docs/superpowers/plans/YYYY-MM-DD-frontend-wizard.md` (to be created).
+Frontend wizard (Next.js) is covered by a separate plan: `docs/superpowers/plans/2026-08-26-frontend-wizard.md`.
