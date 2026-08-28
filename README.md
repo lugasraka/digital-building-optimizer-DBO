@@ -2,6 +2,15 @@
 
 **Describe any commercial building in three inputs. Get a decarbonization plan you can act on.**
 
+**Try it live:** [digital-building-optimizer-dbo.vercel.app](https://digital-building-optimizer-dbo.vercel.app)
+
+<!--
+Screenshot placeholder: drop your capture at docs/demo-results.png, then
+uncomment the line below and delete this comment block.
+
+![DBO results — recommended package, financing comparison, and resilience](docs/demo-results.png)
+-->
+
 Enter a ZIP code, building type, and floor area. The app builds your energy and emissions baseline, sizes solar, batteries, and heat pumps for your building, tells you what the package costs and saves, scores your climate risk, and exports a report you can hand to a stakeholder.
 
 ## Who it's for
