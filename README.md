@@ -4,18 +4,17 @@
 
 **Try it live:** [digital-building-optimizer-dbo.vercel.app](https://digital-building-optimizer-dbo.vercel.app)
 
-<!--
-Screenshot placeholder: drop your capture at docs/demo-results.png, then
-uncomment the line below and delete this comment block.
-
 ![DBO results — recommended package, financing comparison, and resilience](docs/demo-results.png)
--->
 
-Enter a ZIP code, building type, and floor area. The app builds your energy and emissions baseline, sizes solar, batteries, and heat pumps for your building, tells you what the package costs and saves, scores your climate risk, and exports a report you can hand to a stakeholder.
+Enter a ZIP code, building type, and floor area. The app builds your energy and emissions baseline, sizes solar, batteries, and heat pumps for your building, tells you what the package costs and saves, scores your climate risk, and exports a report you can hand to a stakeholder. A professional energy audit costs five figures and weeks of lead time. This gets you a credible first answer in five minutes, free.
 
 ## Who it's for
 
-Building owners, energy consultants, and sustainability teams who need a credible first answer before spending weeks on engineering studies. This is a prototype: outputs are directionally correct, not investment-grade.
+**Small and mid-sized companies first.** Most SMEs know they should be doing something about energy costs and emissions, but a comprehensive audit is a big-ticket engagement: specialist consultants, weeks of metering and modeling, five-figure fees. So the topic stays on the "someday" list. This app moves "someday" to today: enter three facts about your building and walk away with a baseline, an asset recommendation, a financing comparison, and a PDF you can put in front of your bank, landlord, or board, free and in one sitting.
+
+Energy consultants and corporate sustainability teams get value from it too: a fast screening step that makes the eventual detailed audit narrower, cheaper, and faster.
+
+One caveat: this is a prototype. Outputs are directionally correct, not investment-grade. Treat it as the tool that starts the decarbonization conversation and scopes the real audit.
 
 ## How it works
 
@@ -31,7 +30,7 @@ You walk five screens:
 
 Nothing in the app is a black box. Every input traces to a named public source: Census for geography, CBECS for building energy benchmarks, EIA and eGRID for tariffs and grid carbon, FEMA's National Risk Index for hazard scores. The optimization is a transparent hourly linear program, and the **Data & Methods** page inside the app documents each source and its limits.
 
-One honest caveat: weather and solar profiles are synthetic approximations, not measured data. The app labels this everywhere it matters.
+One caveat: weather and solar profiles are synthetic approximations, not measured data. The app labels this everywhere it matters.
 
 ## Under the hood
 
