@@ -1,107 +1,68 @@
-# Digital Building Optimizer (DBO Prototype)
+# Digital Building Optimizer
 
-A standalone technical proof-of-concept for building decarbonization planning:
-three facility inputs become an energy and emissions baseline, clean-energy
-asset sizing with hourly dispatch, climate resilience scoring, and a
-CapEx-vs-EaaS financing comparison.
+**Describe any commercial building in three inputs. Get a decarbonization plan you can act on.**
 
-Design spec: `docs/superpowers/specs/2026-08-26-dbo-prototype-design.md`.
-Implementation plans: `docs/superpowers/plans/`.
+Enter a ZIP code, building type, and floor area. The app builds your energy and emissions baseline, sizes solar, batteries, and heat pumps for your building, tells you what the package costs and saves, scores your climate risk, and exports a report you can hand to a stakeholder.
 
-## Features
+## Who it's for
 
-- **Guided 5-step wizard** (facility → baseline → scenario → results →
-  summary) with URL-driven navigation and prerequisite gating
-- **Energy & emissions baseline**: monthly load profiles, scope 1/2
-  emissions, spend breakdown, peak demand — from ZIP code, building type,
-  floor area, and optional vintage
-- **Asset optimization**: solar PV, battery storage, and heat pump sizing via
-  an hourly linear-program dispatch across all 8,760 hours; `max_npv` or
-  CO₂-target objectives
-- **Financing comparison**: direct CapEx vs Energy-as-a-Service on customer
-  NPV, IRR, and simple payback
-- **Climate resilience scoring**: FEMA NRI-derived hazard exposure
-  before/after asset mitigation, per hazard and overall
-- **PDF technical report**: one-click export with a rationale paragraph per
-  recommended asset, financial verdict, emissions trajectory, resilience
-  narrative, and a methodology footnote
-- **Data & Methods page** (`/methods`): every input traced to a named public
-  dataset or inspectable method — no black box
-- **CSV export** of baseline monthly, emissions trajectory, and cumulative
-  cashflows
-- **Offline mock mode**: the wizard runs against committed API fixtures with
-  no backend
+Building owners, energy consultants, and sustainability teams who need a credible first answer before spending weeks on engineering studies. This is a prototype: outputs are directionally correct, not investment-grade.
 
-## Quickstart (backend)
+## How it works
+
+You walk five screens:
+
+1. **Facility** — ZIP, building type, size, construction vintage
+2. **Baseline** — what the building consumes and emits today, and what it costs, month by month
+3. **Goal** — maximize financial return, or hit a CO₂ reduction target; choose which assets are on the table
+4. **Results** — recommended system sizes, hourly dispatch, CapEx vs. Energy-as-a-Service financing compared on NPV and payback, and climate hazard exposure before and after
+5. **Summary** — the recommendation in plain language, plus a PDF report explaining why each asset was chosen and a CSV of the underlying numbers
+
+## Why trust it
+
+Nothing in the app is a black box. Every input traces to a named public source: Census for geography, CBECS for building energy benchmarks, EIA and eGRID for tariffs and grid carbon, FEMA's National Risk Index for hazard scores. The optimization is a transparent hourly linear program, and the **Data & Methods** page inside the app documents each source and its limits.
+
+One honest caveat: weather and solar profiles are synthetic approximations, not measured data. The app labels this everywhere it matters.
+
+## Under the hood
+
+Three services, one data flow:
+
+```
+┌──────────────────┐     ┌─────────────────────┐     ┌──────────────────┐
+│  Frontend        │     │  Backend API        │     │  Reference data  │
+│  Next.js wizard  │────▶│  FastAPI            │────▶│  committed files │
+│  charts + PDF   ◀│─────│  baseline / optimize│     │  backend/data/   │
+└──────────────────┘     │  / resilience       │     └──────────────────┘
+                         └──────────┬──────────┘
+                                    │
+                         ┌──────────▼──────────┐
+                         │  Engine             │
+                         │  hourly dispatch LP │
+                         │  + DCF financing    │
+                         └─────────────────────┘
+```
+
+The wizard sends three facility inputs plus a scenario. The API resolves the location to climate zone, tariffs, and grid carbon from committed datasets, then the engine dispatches candidate asset systems hour by hour and prices each one. The frontend renders results and generates the PDF report locally.
+
+## Running it
+
+Backend (Python):
 
     pip install -r backend/requirements.txt
     uvicorn app.main:create_app --factory --reload --port 8000   # from backend/
 
-All reference datasets are committed under `backend/data/`; no network needed.
-To rebuild them from public sources (optional):
-
-    python data_pipeline/build_crosswalk.py   # needs network (US Census)
-    python data_pipeline/build_tmy.py         # offline, deterministic
-    python data_pipeline/build_nri.py         # FEMA NRI w/ offline fallback
-
-## API tour
-
-    curl -s localhost:8000/api/v1/health
-    curl -s -X POST localhost:8000/api/v1/baseline -H 'Content-Type: application/json' \
-      -d '{"zip_code":"94105","building_type":"office","floor_area_sqft":50000}'
-    curl -s -X POST localhost:8000/api/v1/optimize -H 'Content-Type: application/json' \
-      -d '{"facility":{"zip_code":"94105","building_type":"office","floor_area_sqft":50000},
-           "scenario":{"objective":"target_co2","co2_reduction_target_pct":40}}'
-    curl -s -X POST localhost:8000/api/v1/resilience -H 'Content-Type: application/json' \
-      -d '{"zip_code":"94105","building_type":"hospital"}'
-
-End-to-end check against a running server: `./scripts/smoke_demo.sh`.
-
-## Quickstart (frontend wizard)
+Frontend (Node 18+):
 
     cd frontend
     npm install
-    cp .env.local.example .env.local   # NEXT_PUBLIC_API_BASE, NEXT_PUBLIC_USE_MOCKS
+    cp .env.local.example .env.local
     npm run dev                        # http://localhost:3000
 
-With `NEXT_PUBLIC_USE_MOCKS=1` the wizard runs fully offline against committed
-fixtures in `frontend/public/fixtures/` (captured from the live API). With mocks
-off, start the backend first (above) and point `NEXT_PUBLIC_API_BASE` at it.
+No backend handy? Set `NEXT_PUBLIC_USE_MOCKS=1` in `.env.local` and the wizard runs offline against committed fixtures. Pipeline scripts in `data_pipeline/` rebuild each dataset from its public source. `./scripts/smoke_demo.sh` checks the API end to end.
 
-## Tests (frontend)
+Tests: `npm test` (unit) and `npm run e2e` (browser, needs `npx playwright install chromium` once). The raw API is documented by example in `scripts/smoke_demo.sh`.
 
-    cd frontend
-    npm test          # Vitest unit tests (API, store, validation, PDF narrative, methodology)
-    npm run e2e       # Playwright: wizard happy path + PDF export (mock mode;
-                      # needs npx playwright install chromium once)
+---
 
-To run the e2e suite against a live backend instead of fixtures:
-
-    PLAYWRIGHT_USE_MOCKS=0 npm run e2e
-
-## Data sources & methodology
-
-Every number in the app traces back to a named source — see the in-app
-**Data & Methods** page (`/methods`) for the full registry with per-source
-descriptions:
-
-| Input | Source |
-|---|---|
-| ZIP → county lookup | U.S. Census 2020 ZCTA-to-county relationship file |
-| Climate zone groups | ASHRAE-style classification per weather station |
-| Weather & solar profiles | Deterministic synthetic representative meteorological year (`data_pipeline/build_tmy.py`) |
-| EUI benchmarks | CBECS 2018 survey medians (EIA) |
-| Tariffs & grid carbon | EIA state averages · EPA eGRID2022 subregions |
-| Hazard scores | FEMA National Risk Index, county level |
-| Dispatch | Hourly linear program (open, inspectable) |
-| Financing | Standard NPV / IRR / simple-payback cashflow model |
-
-The pipeline scripts under `data_pipeline/` regenerate each dataset from its
-public source.
-
-## Honesty notes
-
-Load profiles and solar irradiance are deterministic synthetic approximations
-("representative meteorological year"); benchmarks are CBECS-derived medians;
-tariffs are state averages. Outputs are directionally credible, not
-investment-grade.
+Built by **Raka Adrianto**, Sustainability PM.
