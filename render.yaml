@@ -1,0 +1,16 @@
+# Render blueprint: deploys the FastAPI backend as a free web service.
+# Deploy via Render dashboard: New -> Blueprint -> select this repository.
+services:
+  - type: web
+    name: dbo-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:create_app --factory --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    envVars:
+      # Comma-separated frontend origins allowed by CORS. Update after the
+      # Vercel deployment exists (e.g. https://dbo-xxxx.vercel.app).
+      - key: CORS_ORIGINS
+        sync: false

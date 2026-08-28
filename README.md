@@ -63,6 +63,15 @@ No backend handy? Set `NEXT_PUBLIC_USE_MOCKS=1` in `.env.local` and the wizard r
 
 Tests: `npm test` (unit) and `npm run e2e` (browser, needs `npx playwright install chromium` once). The raw API is documented by example in `scripts/smoke_demo.sh`.
 
+## Deploying
+
+The app deploys free on two services:
+
+- **Backend on Render**: New → Blueprint → select this repo. The `render.yaml` at the root defines the service (Python, health check `/api/v1/health`). After the frontend exists, set `CORS_ORIGINS` to the frontend URL (comma-separated) and redeploy.
+- **Frontend on Vercel**: import the repo, set Root Directory to `frontend`, and add `NEXT_PUBLIC_API_BASE` pointing at the Render URL. Leave `NEXT_PUBLIC_USE_MOCKS` unset for a live demo.
+
+Free-tier note: the Render service sleeps after 15 minutes idle, so the first visitor waits about a minute for it to wake.
+
 ---
 
 Built by **Raka Adrianto**, Sustainability PM.
